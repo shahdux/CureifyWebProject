@@ -6,3 +6,6 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+.navlink:hover{
+    color: #00A4AA;
+}
