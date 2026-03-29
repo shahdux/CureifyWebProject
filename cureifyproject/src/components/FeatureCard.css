@@ -1,0 +1,18 @@
+.featureName{
+    color: #36404D;
+font-family: Arial;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+.featureDes{
+    color: #4A5565;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+width: 225.86px;
+line-height: normal
+}
