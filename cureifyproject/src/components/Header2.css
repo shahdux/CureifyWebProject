@@ -31,3 +31,87 @@ margin-bottom: 30px;
 
     box-shadow: 0 4px 199px 0 rgba(6, 24, 89, 0.50), 0 22.308px 44.615px -10.708px rgba(0, 0, 0, 0.25);
 }
+/* Container for the image and icons */
+.for2images {
+    position: relative; /* Allows icons to be positioned relative to the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base style for all 4 badges */
+.floating-badge {
+    position: absolute;
+    display: flex;
+width: 45.818px;
+height: 90.5px;
+transform: rotate(-7.607deg);
+padding: 5.142px 16.455px 0 16.455px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 6.17px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 10;
+    border-radius: 16.455px;
+box-shadow: 0 4.114px 6.17px -4.114px rgba(0, 0, 0, 0.10);
+    /* Apply the animation */
+    animation: badgeFloat 4s ease-in-out infinite;
+    color: #FFF;
+text-align: center;
+font-family: Calibri;
+font-size: 12.341px;
+font-style: normal;
+font-weight: 300;
+line-height: 16.455px; /* 133.333% */
+}
+
+/* Individual Positions */
+.badge-top-left {
+    top: -20px;
+    left: -40px;
+    background-color: #ff9f1c; /* Orange */
+}
+
+.badge-top-right {
+    top: 10px;
+transform: rotate(13.562deg);
+    right: -30px;
+    background-color: #2ec4b6; /* Green */
+    animation-delay: 0.5s; /* Staggered start */
+}
+
+.badge-bottom-left {
+    bottom: 40px;
+    left: -30px;
+    background-color: #2196f3; /* Blue */
+    animation-delay: 1s;
+}
+
+.badge-bottom-right {
+    bottom: -10px;
+    right: -40px;
+    background-color: #ff7070; /* Coral/Red */
+    animation-delay: 1.5s;
+}
+
+/* Floating Animation Keyframes */
+@keyframes badgeFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px); /* Moves up 15px */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Ensure main image stays behind badges */
+.imgclass {
+    position: relative;
+    z-index: 5;
+    border-radius: 20px;
+    box-shadow: 0 4px 199px 0 rgba(6, 24, 89, 0.50), 0 22.308px 44.615px -10.708px rgba(0, 0, 0, 0.25);
+}
