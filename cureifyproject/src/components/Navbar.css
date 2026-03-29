@@ -3,6 +3,7 @@
 width: 1240px;
 height: 57px;
 padding-left: 42px;
+justify-content: center;
 align-items: center;
 gap: 203px;
 border-radius: 200px;
@@ -12,4 +13,32 @@ box-shadow: 0 0 14px 0 rgba(0, 55, 114, 0.02), 0 4px 24px 0 rgba(0, 69, 143, 0.2
 .forlinks{
     display: flex;
     gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.langbutton{
+    display: flex;
+width: 36px;
+height: 32px;
+justify-content: center;
+align-items: center;
+
+border-radius: 4px;
+border: 1px solid #36404D;
+transition: 0.5s ease;
+}
+.langbutton:hover{
+    border: 1px solid #00A4AA;
+}
+.langbutton:hover .langb{
+    color: #00A4AA;
+}
+.langb{
+    color: #36404D;
+font-family: "Helvetica Neue";
+font-size: 15px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+transition: 0.5s ease;
 }

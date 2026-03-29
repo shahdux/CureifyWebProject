@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import "./Navbar.css";
 import Navlink from './Navlink';
+import FilledButton from './FilledButton';
+import smalllogo from "../assets/smalllogo.svg";
+
 const Navbar = () => {
     return ( 
         <>
         <div className='nav'>
+<img src={smalllogo} alt="" />
             <div className='forlinks'>
                 <Navlink linkname="Features"/>
                 <Navlink linkname="Blogs"/>
@@ -13,7 +17,10 @@ const Navbar = () => {
                                 <Navlink linkname="Contact"/>
                                                                 <Navlink linkname="Policies"/>
 
-
+<FilledButton btext="Download Now"/>
+<div className='langbutton'>
+    <p className='langb'>AR</p>
+</div>
             </div>
         </div>
         
