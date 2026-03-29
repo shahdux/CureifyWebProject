@@ -118,3 +118,43 @@ margin-top: 8px;
   /* Optional: adds a slight shadow change to enhance the floating feel */
   transition: filter 0.3s ease;
 }
+/* --- Keep your existing .pa and .centerimg as they are --- */
+
+.pa {
+    position: absolute;
+    /* Add this to make the slide-out smooth */
+    transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.5s ease;
+}
+
+/* 1. LEFT IMAGE: Keep your 800px positioning */
+.pleft {
+    right: 800px;
+    /* No transform here = stays at your original 800px position */
+}
+
+/* 2. RIGHT IMAGE: Keep your 400px margin */
+.pright {
+    margin-left: 400px;
+    /* No transform here = stays at your original position */
+}
+
+/* --- THE HOVER ANIMATION --- */
+
+/* When you hover over the container, we slide them outwards 
+   relative to their current positions */
+.forimages:hover .pleft {
+    /* Moves it further left from its original spot */
+    transform: translateX(-150px) rotate(-5deg); 
+    opacity: 1;
+}
+
+.forimages:hover .pright {
+    /* Moves it further right from its original spot */
+    transform: translateX(150px) rotate(5deg);
+    opacity: 1;
+}
+
+/* Optional: Slight scale up for the center image on hover */
+.forimages:hover .centerimg {
+    transform: scale(1.05);
+}
