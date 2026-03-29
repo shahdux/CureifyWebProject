@@ -16,8 +16,9 @@ const Navbar = () => {
                 <Navlink linkname="Careers"/>
                                 <Navlink linkname="Contact"/>
                                                                 <Navlink linkname="Policies"/>
+                                                                  <Navlink linkname="Download Now" color="#00A4AA" fontWeight="600" />
 
-<FilledButton btext="Download Now"/>
+
 <div className='langbutton'>
     <p className='langb'>AR</p>
 </div>
