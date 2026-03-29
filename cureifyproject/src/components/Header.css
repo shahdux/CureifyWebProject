@@ -96,3 +96,25 @@ margin-top: 8px;
     align-items: center;
     margin-top: 560px;
 }
+/* 1. Define the floating keyframes */
+@keyframes slowFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust this number for a higher/lower float */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* 2. Apply it to your existing class */
+.centerimg {
+  /* ... keep your existing positioning/size styles here ... */
+  
+  animation: slowFloat 6s ease-in-out infinite;
+  
+  /* Optional: adds a slight shadow change to enhance the floating feel */
+  transition: filter 0.3s ease;
+}
