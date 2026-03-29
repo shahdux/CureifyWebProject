@@ -1,0 +1,33 @@
+.pgwithimg{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+   background: linear-gradient(180deg, rgba(251, 250, 247, 0.60) 0%, rgba(229, 242, 255, 0.53) 58.77%, rgba(190, 223, 255, 0.47) 100%);
+}
+.sectionTitle{
+    color: #36404D;
+font-family: Arial;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+.sectionDes{
+    color: #36404D;
+    width: 569px;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 30px;
+}
+.imgclass{
+    border-radius: 20px;
+
+    box-shadow: 0 4px 199px 0 rgba(6, 24, 89, 0.50), 0 22.308px 44.615px -10.708px rgba(0, 0, 0, 0.25);
+}
