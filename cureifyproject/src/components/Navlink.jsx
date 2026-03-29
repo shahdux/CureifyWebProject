@@ -3,9 +3,7 @@ import "./Navlink.css"
 const Navlink = (props) => {
     return ( 
         <>
-          <p className='navLink'>{props.linkname}
-
-        </p>
+          <p className='navLink'>{props.linkname}</p>
         
         
         

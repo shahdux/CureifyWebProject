@@ -1,0 +1,22 @@
+.filledButton{
+    display: flex;
+width: 173px;
+height: 35px;
+padding: 0 18.551px;
+justify-content: center;
+align-items: center;
+gap: 4.543px;
+border-radius: 24.988px;
+border: 0.379px solid #00A4AA;
+background: #00A4AA;
+box-shadow: 0 0.568px 10.222px 0 #FFF, 0 0.568px 1.136px -0.568px #000;
+}
+.buttontext{
+    color: #FFF;
+text-align: center;
+font-family: Arial;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}

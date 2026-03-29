@@ -7,6 +7,13 @@ const Navbar = () => {
         <div className='nav'>
             <div className='forlinks'>
                 <Navlink linkname="Features"/>
+                <Navlink linkname="Blogs"/>
+                <Navlink linkname="About"/>
+                <Navlink linkname="Careers"/>
+                                <Navlink linkname="Contact"/>
+                                                                <Navlink linkname="Policies"/>
+
+
             </div>
         </div>
         

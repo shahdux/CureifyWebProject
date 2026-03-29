@@ -9,3 +9,7 @@ border-radius: 200px;
 background: #FFF;
 box-shadow: 0 0 14px 0 rgba(0, 55, 114, 0.02), 0 4px 24px 0 rgba(0, 69, 143, 0.20);
 }
+.forlinks{
+    display: flex;
+    gap: 30px;
+}
