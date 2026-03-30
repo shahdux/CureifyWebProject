@@ -15,6 +15,25 @@ import step3 from "../assets/work3.svg";
 import icon1 from "../assets/step1.svg";
 import icon2 from "../assets/step2.svg";
 import icon3 from "../assets/step3.svg";
+import phonemock from "../assets/phonemock.svg";
+import i1 from "../assets/i1.svg";
+import i2 from "../assets/i2.svg";
+import i3 from "../assets/i3.svg";
+import i4 from "../assets/i4.svg";
+import i5 from "../assets/i5.svg";
+import i6 from "../assets/i6.svg";
+import i7 from "../assets/i7.svg";
+import i8 from "../assets/i8.svg";
+import i9 from "../assets/i9.svg";
+
+
+
+
+
+
+
+
+import FilledButton from '../components/FilledButton';
 
 
 
@@ -44,30 +63,10 @@ your cart and schedule with 100% accuracy."/>
 <FeatureCard fimg={f4} fname="Blood Test Records" fdes="Stop guessing about your health. Easily upload and compare your blood test results over time to visualize trends and track how your body is responding to treatment."/>
 
             </div>
+            <FilledButton btext="Explore all features" />
         </div>
 
-        {/* <div className='pgwithimg2'>
-            <div className='titlewdes'>
-                <p className='grey'>How It works</p>
-                  <p className='dess'>Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you with timely notifications and easy tracking—keeping your health organized and stress-free.</p>
-            </div>
-            <div className='htwcards'>
-                <div className='card1'>
-                    <img src={step1} alt="" />
-                    <p className='step1'>1. Add & Organize</p>
-                    <p className='step1des'>Scan your prescription or upload it once. Cureify automatically organizes your medicines, dosages, durations, and color-codes them for easy recognition.</p>
-                </div>
-                  <div className='card1 green'>
-                    <img src={step2} alt="" />
-                    <p className='step1'>2.Stay Consistent</p>
-                    <p className='step1des'>Receive smart reminders, daily checklists, refill alerts, and streak tracking. Get confirmation when you’ve taken your dose — so you never double-dose or forget again.</p>
-                </div>  <div className='card1 greycard'>
-                    <img src={step3} alt="" />
-                    <p className='step1'>3. Find & Understand</p>
-                    <p className='step1des'>Search medicine availability, view safe alternatives, track blood test progress with color-coded insights, and monitor appointments — all in one place.</p>
-                </div>
-            </div>
-        </div> */}
+      
         <div className='pgwithimg2'>
     <div className='titlewdes'>
         <p className='grey'>How It works</p>
@@ -100,7 +99,28 @@ your cart and schedule with 100% accuracy."/>
         </div>
     </div>
 </div>
-             
+            <div className='whyUsSection'>
+                <div className='fortitlewsub'>
+                    <p className='whiteTitles'>Why Choose Us</p>
+                    <p className='whiteDes'>Managing your health shouldn't feel like scattered pieces. We gather your prescriptions, schedules, and health vitals into one intuitive mobile.</p>
+                </div>
+                {/* <img src={phonemock} alt="phone mockup" /> */}
+               <div className="w-animation-wrapper">
+        <img src={phonemock} alt="phone mockup" className="w-phone-img" />
+
+        {/* Scattered Icons - assigned unique classes for their start positions */}
+        <div className="w-icon w-icon-1"><img src={i1} /></div>
+        <div className="w-icon w-icon-2"><img src={i2} /></div>
+        <div className="w-icon w-icon-3"><img src={i3} /></div>
+        <div className="w-icon w-icon-4"><img src={i4} /></div>
+        <div className="w-icon w-icon-5"><img src={i5} /></div>
+        <div className="w-icon w-icon-6"><img src={i6} /></div>
+        <div className="w-icon w-icon-7"><img src={i7} /></div>
+        <div className="w-icon w-icon-8"><img src={i8} /></div>
+        <div className="w-icon w-icon-9"><img src={i9} /></div>
+    </div>
+              
+                </div> 
 
         </>
      );
