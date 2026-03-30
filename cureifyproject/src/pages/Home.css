@@ -195,3 +195,47 @@ background: linear-gradient(180deg, #01A7AD 0%, #004547 103.9%);
     border-radius: 27.167px 21px;
 background: linear-gradient(180deg, #7E95B3 0%, #36404D 100%);
 }
+/* 1. Ensure the card is the "anchor" for the icon */
+.card1 {
+    position: relative; /* Crucial: allows the icon to sit relative to the card */
+    overflow: visible;  /* Allows the icon to hang off the edge */
+}
+
+/* 2. Create the smooth up-and-down motion */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px); /* Moves up 10px */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* 3. Style the white icon box */
+.floating-icon {
+    position: absolute;
+    bottom: -15px;  /* Hangs halfway off the bottom edge */
+    right: 15px;    /* Tucked into the bottom right corner */
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Soft high-fidelity shadow */
+    
+    /* Apply the animation */
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Optional: Stagger them so they don't move in perfect sync */
+.card1:nth-child(2) .floating-icon {
+    animation-delay: 0.5s;
+}
+.card1:nth-child(3) .floating-icon {
+    animation-delay: 1s;
+}

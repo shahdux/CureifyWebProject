@@ -12,6 +12,11 @@ import f4 from "../assets/f4.svg";
 import step1 from "../assets/work1.svg";
 import step2 from "../assets/work2.svg";
 import step3 from "../assets/work3.svg";
+import icon1 from "../assets/step1.svg";
+import icon2 from "../assets/step2.svg";
+import icon3 from "../assets/step3.svg";
+
+
 
 
 
@@ -41,7 +46,7 @@ your cart and schedule with 100% accuracy."/>
             </div>
         </div>
 
-        <div className='pgwithimg2'>
+        {/* <div className='pgwithimg2'>
             <div className='titlewdes'>
                 <p className='grey'>How It works</p>
                   <p className='dess'>Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you with timely notifications and easy tracking—keeping your health organized and stress-free.</p>
@@ -62,7 +67,39 @@ your cart and schedule with 100% accuracy."/>
                     <p className='step1des'>Search medicine availability, view safe alternatives, track blood test progress with color-coded insights, and monitor appointments — all in one place.</p>
                 </div>
             </div>
+        </div> */}
+        <div className='pgwithimg2'>
+    <div className='titlewdes'>
+        <p className='grey'>How It works</p>
+        <p className='dess'>Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you with timely notifications and easy tracking—keeping your health organized and stress-free.</p>
+    </div>
+
+    <div className='htwcards'>
+        {/* Card 1 */}
+        <div className='card1'>
+            <img src={step1} alt="" />
+            <p className='step1'>1. Add & Organize</p>
+            <p className='step1des'>Scan your prescription or upload it once. Cureify automatically organizes your medicines, dosages, durations, and color-codes them for easy recognition.</p>
+            <div className='floating-icon'><img src={icon1} alt="scan" /></div>
         </div>
+
+        {/* Card 2 */}
+        <div className='card1 green'>
+            <img src={step2} alt="" />
+            <p className='step1'>2. Stay Consistent</p>
+            <p className='step1des'>Search medicine availability, view safe alternatives, track blood test progress with color-coded insights, and monitor appointments — all in one place.</p>
+            <div className='floating-icon'><img src={icon2} alt="bell" /></div>
+        </div>
+
+        {/* Card 3 */}
+        <div className='card1 greycard'>
+            <img src={step3} alt="" />
+            <p className='step1'>3. Find & Understand</p>
+            <p className='step1des'>Search medicine availability, view safe alternatives, track blood test progress with color-coded insights, and monitor appointments — all in one place.</p>
+            <div className='floating-icon'><img src={icon3} alt="search" /></div>
+        </div>
+    </div>
+</div>
              
 
         </>
