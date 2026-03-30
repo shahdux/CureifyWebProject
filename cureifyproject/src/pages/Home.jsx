@@ -9,6 +9,11 @@ import f1 from "../assets/f1.svg";
 import f2 from "../assets/f2.svg";
 import f3 from "../assets/f3.svg";
 import f4 from "../assets/f4.svg";
+import step1 from "../assets/work1.svg";
+import step2 from "../assets/work2.svg";
+import step3 from "../assets/work3.svg";
+
+
 
 
 
@@ -33,19 +38,29 @@ your cart and schedule with 100% accuracy."/>
 <FeatureCard fimg={f3} fname="Real-Time Stock Accuracy" fdes="No more surprise cancellations. Our direct integration with a verified network of pharmacies ensures what you see is actually on the shelf."/>
 <FeatureCard fimg={f4} fname="Blood Test Records" fdes="Stop guessing about your health. Easily upload and compare your blood test results over time to visualize trends and track how your body is responding to treatment."/>
 
+            </div>
+        </div>
 
-        
-        
-
-
-                
-                
-
-                 
-         
-                
-         
-              
+        <div className='pgwithimg2'>
+            <div className='titlewdes'>
+                <p className='grey'>How It works</p>
+                  <p className='dess'>Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you with timely notifications and easy tracking—keeping your health organized and stress-free.</p>
+            </div>
+            <div className='htwcards'>
+                <div className='card1'>
+                    <img src={step1} alt="" />
+                    <p className='step1'>1. Add & Organize</p>
+                    <p className='step1des'>Scan your prescription or upload it once. Cureify automatically organizes your medicines, dosages, durations, and color-codes them for easy recognition.</p>
+                </div>
+                  <div className='card1 green'>
+                    <img src={step2} alt="" />
+                    <p className='step1'>2.Stay Consistent</p>
+                    <p className='step1des'>Receive smart reminders, daily checklists, refill alerts, and streak tracking. Get confirmation when you’ve taken your dose — so you never double-dose or forget again.</p>
+                </div>  <div className='card1 greycard'>
+                    <img src={step3} alt="" />
+                    <p className='step1'>3. Find & Understand</p>
+                    <p className='step1des'>Search medicine availability, view safe alternatives, track blood test progress with color-coded insights, and monitor appointments — all in one place.</p>
+                </div>
             </div>
         </div>
              
