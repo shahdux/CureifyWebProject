@@ -1,0 +1,32 @@
+.downloadb{
+    display: flex;
+width: 193.727px;
+height: 65.431px;
+
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+border-radius: 8px;
+}
+.downtextwdes{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.downtext{
+    color: rgba(255, 255, 255, 0.93);
+font-family: "Helvetica Neue";
+font-size: 10.309px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+.storename{
+    color: #FFF;
+font-family: "Helvetica Neue";
+font-size: 18.556px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}

@@ -1,0 +1,38 @@
+.downloadSection{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    flex-wrap: wrap;
+     background-image: url('../assets/subbg.png');
+     justify-content: center;
+     align-items: center;
+     background-size: cover;
+}
+.downloadTitle{
+    color: #FFF;
+font-family: Arial;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 43.296px;
+width: 515px;
+margin: 0;
+}
+.downloadDes{
+    width: 377px;
+    color: #FFF;
+font-family: Poppins;
+font-size: 16.494px;
+font-style: normal;
+font-weight: 300;
+line-height: 24.741px; 
+}
+.for2buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.imgpa{
+    position: absolute;
+}
