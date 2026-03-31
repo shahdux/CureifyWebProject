@@ -51,3 +51,162 @@ line-height: 24.741px;
         transform: translateY(0px);
     }
 }
+@media (max-width: 950px) {
+  .downloadSection{
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadsecpg {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.grey{
+    margin: 0;
+}
+.titlewdes {
+    gap: 20px;
+    flex-direction: column;
+            gap: 0
+}
+.dess{
+        width: 341px;
+}
+.whiteDes {
+    width: 510px;}
+    .heroSubtext {
+   
+    padding: 0px 20px;
+}
+.imgclass {
+    width: 80%;
+}
+.pgwithimg {
+   
+    padding: 100px 0px;}
+        .pgwithimg {
+        padding: 70px 0px;
+            gap: 24px;
+    }
+    .sectionTitle {
+   
+    font-size: 32px;}
+    .titles{
+    width: auto;
+}
+.pleft {
+    
+    display: none;
+}
+.pright{
+        display: none;
+
+}
+.textc {
+    width: 100%;
+}
+.w-icon-6 {
+    --start-x: 180px;}
+    .centerimg {
+    width: 100%;
+}
+.forlinks{
+    display: none;
+}
+.nav{
+    width: 90%;
+}
+.floating-badge{
+    display: none;
+}
+.forpgsection{
+    order: 2;
+    gap: 30px;
+}
+.sectionDes {
+    
+    width: 439px;}
+    .imgpa {
+    width: 100%;
+}
+}
+@media (max-width: 1450px) {
+    .pleft {
+    
+    display: none;
+}
+
+.pright{
+        display: none;
+
+}
+}
+@media (max-width: 600px) {
+    
+  .downloadsecpg {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.heroText{
+    font-size: 32px;
+}
+.for2buttons{
+flex-direction: column;
+}
+.filledButton{
+        width: 355px;
+}
+.strokeButton{
+            width: 355px;
+
+}
+.header {
+    
+    height: 98vh;}
+    .forpg {
+   
+    margin-top: -150px;
+}
+.centerimg{
+    padding-bottom: 120px;
+}
+    .sectionDes {
+        width: 349px;
+    }
+    .titles{
+        margin: 0;
+    }
+    .downloadTitle {
+   
+    width: 375px;
+  
+}
+.downloadDes {
+    width: 375px;
+}
+.for2buttons2 {
+ 
+    flex-direction: column;
+}
+.downloadb {
+    display: flex;
+    width: 383.727px;
+}
+    .whiteDes {
+        width: auto;
+        padding: 0px 20px;
+    }
+    .whiteTitles{
+        font-size: 32px;
+    }
+    .w-icon-3 {
+    --start-x: 140px;}
+    .footer{
+            flex-direction: column;
+            gap: 30px;
+            padding-left: 20px !important;
+    }
+   
+}

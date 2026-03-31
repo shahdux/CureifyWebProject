@@ -40,3 +40,13 @@ font-weight: 500;
 line-height: normal;
 margin: 0;
 }
+
+
+@media (max-width: 600px) {
+
+    .downloadb {
+        display: flex;
+        width: 383.727px;
+    }
+}
+    
