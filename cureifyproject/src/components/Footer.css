@@ -6,6 +6,7 @@
     border-radius: 12.313px;
 background: #36404D;
 justify-content: space-around;
+ flex-wrap: wrap;
 
 }
 .firstsection{
@@ -15,6 +16,7 @@ justify-content: space-around;
     align-items: start;
     width: 280px;
         gap: 12px;
+        flex-wrap: wrap;
 
 }
 .w200{
@@ -59,7 +61,8 @@ margin: 0;
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: auto;
+    padding: 80px 0px;
     background: #FBFAF7;
 }
 .textwicon{
