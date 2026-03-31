@@ -1,0 +1,288 @@
+.featuresHero{
+display: flex;
+width: 100%;
+height: 65vh;
+justify-content: center;
+padding-top: 300px;
+align-items: center;
+     background-image: url('../assets/halfbg.png');
+     background-size: cover;
+     flex-direction: column;
+     
+}
+.fsubtitle{
+    color: #FFF;
+text-align: center;
+font-family: Arial;
+font-size: 44px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin: 0;
+margin-top: 130px;
+
+
+}
+.ftitle{
+    color: #00A4AA;
+text-align: center;
+font-family: Arial;
+font-size: 74px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+margin: 12px 0px 16px 0px;
+}
+.fdescription{
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+}
+
+.scroll-down {
+    margin-top: 30px;
+    font-size: 24px;
+    opacity: 0.8;
+    animation: bounce 2s infinite;
+}
+
+/* ANIMATION */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+.ftitle {
+  height: 80px; /* Adjust to match your font-size + padding */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.ticker-items {
+  display: flex;
+  flex-direction: column;
+  /* (Total items - 1) * 3s = 9s total duration */
+  animation: slideText 9s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.ticker-items span {
+  height: 80px; /* Must match the .ftitle height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00A4AA;
+  white-space: nowrap;
+}
+
+@keyframes slideText {
+  /* 0-25%: First Item */
+  0%, 25% { transform: translateY(0); }
+  
+  /* 30-55%: Second Item */
+  30%, 55% { transform: translateY(-80px); }
+  
+  /* 60-85%: Third Item */
+  60%, 85% { transform: translateY(-160px); }
+  
+  /* 90-100%: Back to start (Duplicate Item) */
+  90%, 100% { transform: translateY(-240px); }
+}
+.circular-container {
+  position: relative;
+  width: 180px; /* Increased container size */
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 15s linear infinite; /* Slowed down slightly for readability */
+  transform-origin: center;
+}
+
+.text-content {
+  fill: #FFFFFF;
+  font-family: 'Poppins', sans-serif; /* Using a cleaner font for UI */
+  font-weight: 500;
+  text-transform: uppercase;
+  /* Reduced font size slightly to prevent crowding */
+  font-size: 16px; 
+  letter-spacing: 2px;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 32px;
+  color: #FFFFFF;
+  /* Centering adjustment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px;
+}
+
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.circular-container.mini {
+  position: relative;
+  /* Shrunk from 180px to 110px to sit better under the description */
+  width: 110px; 
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.circular-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 15s linear infinite;
+  transform-origin: center;
+  transition: animation-duration 0.6s ease-in-out;
+}
+
+.circular-container.mini:hover .circular-text {
+  animation-duration: 3s;
+  cursor: pointer;
+}
+
+.text-content {
+  fill: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* Reduced font-size so letters don't touch on the tighter curve */
+  font-size: 11px; 
+  letter-spacing: 1px;
+}
+
+.arrow {
+  position: absolute;
+  /* Shrunk the arrow to match the new scale */
+  font-size: 22px;
+  color: #FFFFFF;
+  margin-top: -2px;
+}
+
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.circular-container {
+  position: relative;
+  width: 180px; /* Increased container size */
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 15s linear infinite; /* Slowed down slightly for readability */
+  transform-origin: center;
+}
+
+.text-content {
+  fill: #FFFFFF;
+  font-family: 'Poppins', sans-serif; /* Using a cleaner font for UI */
+  font-weight: 500;
+  text-transform: uppercase;
+  /* Reduced font size slightly to prevent crowding */
+  font-size: 16px; 
+  letter-spacing: 2px;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 32px;
+  color: #FFFFFF;
+  /* Centering adjustment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px;
+}
+
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* .circular-container:hover .circular-text {
+  animation-duration: 3s;
+  
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+  cursor: pointer;
+}
+
+.circular-text {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  animation: rotateText 15s linear infinite;
+  transform-origin: center;
+  transition: animation-duration 0.5s ease-in-out;
+} */
+ .circular-container:hover .circular-text {
+  animation-duration: 3s;
+  cursor: pointer;
+
+  /* 1. The Outer Glow: Creates a soft turquoise/white aura around the ring */
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 15px rgba(0, 164, 170, 0.4));
+}
+
+.text-content {
+  fill: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  
+  /* 2. The Inner Glow: Makes the actual letters look like they are emitting light */
+  transition: text-shadow 0.5s ease-in-out;
+}
+
+.circular-container:hover .text-content {
+  /* This adds a crisp 'neon' core to the letters on hover */
+  text-shadow: 0 0 4px #FFFFFF, 
+               0 0 10px rgba(0, 164, 170, 0.8);
+}
+
+.circular-container:hover .arrow {
+  /* 3. Don't forget the arrow! This keeps the glow consistent */
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+.circular-text {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  animation: rotateText 15s linear infinite;
+  transform-origin: center;
+  /* Smoothly transitions the spin speed and the glow filter */
+  transition: animation-duration 0.6s ease-in-out, filter 0.5s ease;
+}
