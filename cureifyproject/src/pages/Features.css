@@ -9,6 +9,7 @@ align-items: center;
      background-size: cover;
      flex-direction: column;
      
+     
 }
 .fsubtitle{
     color: #FFF;
@@ -285,4 +286,27 @@ margin: 0;
   transform-origin: center;
   /* Smoothly transitions the spin speed and the glow filter */
   transition: animation-duration 0.6s ease-in-out, filter 0.5s ease;
+}
+@media (max-width: 1400px) {
+  .ftitle{
+    font-size: 56px;
+  }
+  .fsubtitle{
+     font-size: 32px;
+  }
+}
+@media (max-width: 600px) {
+        .ftitle {
+        font-size: 42px;
+    }
+     .fsubtitle{
+     font-size: 24px;
+  }
+  .featuresHero{
+
+     background-image: url('../assets/grp.png');
+    
+     
+     
+}
 }
