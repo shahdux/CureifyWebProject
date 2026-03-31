@@ -26,13 +26,17 @@ font-size: 16.494px;
 font-style: normal;
 font-weight: 300;
 line-height: 24.741px; 
+
 }
-.for2buttons{
+.for2buttons2{
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 .imgpa{
-    position: absolute;
+      margin-top: -140px;
+}
+.downloadsecpg{
+          margin-top: -140px;
+
 }

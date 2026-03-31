@@ -123,7 +123,7 @@ your cart and schedule with 100% accuracy."/>
               
                 </div> 
 
-                {/* <DownloadApp /> */}
+                <DownloadApp />
                 
 
         </>
