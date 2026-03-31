@@ -345,7 +345,7 @@ background: linear-gradient(180deg, #061859 0%, #264FA3 24.9%, #F4F9FF 94.31%);}
 
 
 /* Row 1 */
-.w-icon-1 { --start-x: -350px; --start-y: -200px; --stop-x: -60px; --stop-y: -100px; background-color: #00cba9; } 
+.w-icon-1 { --start-x: -350px; --start-y: -200px; --stop-x: -80px; --stop-y: -105px; background-color: #00cba9; } 
 .w-icon-2 { --start-x: -50px;  --start-y: -300px; --stop-x: 5px;   --stop-y: -90px; background-color: #2E80FF; } 
 .w-icon-3 { --start-x: 300px;  --start-y: -250px; --stop-x: 60px;  --stop-y: -95px; background-color: #e60000; } 
 

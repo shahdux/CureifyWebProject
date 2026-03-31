@@ -35,6 +35,7 @@ import i9 from "../assets/i9.svg";
 
 import FilledButton from '../components/FilledButton';
 import DownloadApp from '../components/DownloadApp';
+import Footer from '../components/Footer';
 
 
 
@@ -124,6 +125,8 @@ your cart and schedule with 100% accuracy."/>
                 </div> 
 
                 <DownloadApp />
+                
+                <Footer />
                 
 
         </>
