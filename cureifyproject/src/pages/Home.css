@@ -142,7 +142,7 @@ line-height: normal;
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 80px 0px;
+    padding: 90px 0px;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -360,3 +360,16 @@ background: linear-gradient(180deg, #061859 0%, #264FA3 24.9%, #F4F9FF 94.31%);}
 .w-icon-7 { --start-x: -250px; --start-y: 200px;  --stop-x: -85px; --stop-y: 165px;  background-color: #00CBA9; } 
 .w-icon-8 { --start-x: -100px; --start-y: -200px; --stop-x: 0px;   --stop-y: 165px;  background-color: #FFCC00; } 
 .w-icon-9 { --start-x: 250px;  --start-y: 250px;  --stop-x: 80px;  --stop-y: 165px;  background-color: #FF9500; }
+
+
+@media (max-width: 1400px) {
+  .sectionTitle{
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+    
+     .sectionTitle{
+    font-size: 18px;
+  }
+}

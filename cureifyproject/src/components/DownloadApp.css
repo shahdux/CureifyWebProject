@@ -37,3 +37,17 @@ line-height: 24.741px;
     margin-left: -110px;
      margin-right: 150px;
 }
+.imgpa {
+    animation: floatPhone 3s ease-in-out infinite;
+}
+@keyframes floatPhone {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
