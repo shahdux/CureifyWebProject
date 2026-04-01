@@ -51,7 +51,16 @@ line-height: normal;
     display: flex;
     gap: 8px;
 }
-
+.circle{
+    position: absolute;
+    /* top: 0;
+    right: 0; */
+   
+}
+.circle {
+    margin-top: -262px;
+    margin-left: 892px;
+}
 
 @media (max-width: 1400px) {
   .fcard2{
@@ -90,6 +99,9 @@ width: 400px;
 .featDes{
   
 width: 400px;
+}
+.circle{
+    display: none;
 }
 
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./Features.css";
 import Navbar from '../components/Navbar';
-import feat1 from "../assets/f4.png";
+import feat1 from "../assets/e1.svg";
 
 import HorizontalFeatureCard from '../components/HorizontalFeatureCard';
 const Features = () => {
@@ -59,7 +59,10 @@ const Features = () => {
           feattitle="AI-Powered Prescription Scanner"
           featdes="Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically organizing your medicine with 100% accuracy."
           />
-
+ <HorizontalFeatureCard feat1img={feat1}
+          feattitle="AI-Powered Prescription Scanner"
+          featdes="Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically organizing your medicine with 100% accuracy."
+          />
         </div>
       </div>
         </>
