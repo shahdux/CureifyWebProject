@@ -1,0 +1,125 @@
+.fcard2{
+  display: flex;
+height: auto;
+width: 1163px;
+border-radius: 16px;
+background: linear-gradient(180deg, #145EB0 0%, #08284A 100%);
+box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.10);
+justify-content: center;
+    align-items: center;
+    gap: 20px;
+        /* padding-right: 30px; */
+        
+}
+.feattitle{
+    color: #FFF;
+font-family: Arial;
+font-size: 23.971px;
+font-style: normal;
+font-weight: 700;
+line-height: 27.966px; /* 116.667% */
+letter-spacing: -0.499px;
+margin: 0;
+}
+.featDes{
+    color: #FFF;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22.722px; /* 162.302% */
+margin: 0;
+width: 643px;
+}
+.featpg{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+
+}
+.learntext{
+    color: #FFF;
+font-family: Arial;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+.textButton{
+    display: flex;
+    gap: 8px;
+}
+
+
+@media (max-width: 1400px) {
+  .fcard2{
+  width: 800px;
+  gap: 5px;
+        
+}
+.feattitle{
+   
+font-size: 20px;
+
+}
+.featDes{
+  
+width: 400px;
+}
+.fimages {
+    width: 50%;
+}
+}
+@media (max-width: 900px) {
+  .fcard2{
+ flex-direction: column;
+ width: 80%;
+        
+}
+.fimages {
+    width: 100%;
+}
+ .fcard2 {
+        flex-direction: column;
+        width: 80%;
+        padding: 20px;
+        gap: 20px;
+    }
+.featDes{
+  
+width: 400px;
+}
+
+}
+@media (max-width: 600px) {
+        .ftitle {
+        font-size: 42px;
+    }
+     .fsubtitle{
+     font-size: 24px;
+  }
+  .featuresHero{
+
+     background-image: url('../assets/grp.png');
+     height: 60vh;
+    
+     
+     
+}
+.w400px{
+  width: auto;
+  padding: 0px 40px;
+  font-size: 24px;
+}
+    .fcard2 {
+        flex-direction: column;
+        width: 80%;
+        padding: 20px;
+        gap: 20px;
+    }
+    .featDes {
+        width: 321px;
+    }
+}

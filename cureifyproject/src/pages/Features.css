@@ -224,6 +224,16 @@ margin: 0;
   justify-content: center;
   margin-top: -4px;
 }
+.fcards{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 90px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
 
 @keyframes rotateText {
   from { transform: rotate(0deg); }
@@ -287,6 +297,17 @@ margin: 0;
   /* Smoothly transitions the spin speed and the glow filter */
   transition: animation-duration 0.6s ease-in-out, filter 0.5s ease;
 }
+.w400px{
+  width: auto;
+  padding: 0px 200px;
+}
+.forcardsd{
+  display: flex;
+  width: 80%;
+  
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 1400px) {
   .ftitle{
     font-size: 56px;
@@ -294,6 +315,13 @@ margin: 0;
   .fsubtitle{
      font-size: 32px;
   }
+  .w400px{
+  width: auto;
+  padding: 0px 100px;
+    font-size: 24px;
+    margin: 0;
+
+}
 }
 @media (max-width: 600px) {
         .ftitle {
@@ -305,8 +333,14 @@ margin: 0;
   .featuresHero{
 
      background-image: url('../assets/grp.png');
+     height: 60vh;
     
      
      
+}
+.w400px{
+  width: auto;
+  padding: 0px 40px;
+  font-size: 24px;
 }
 }
