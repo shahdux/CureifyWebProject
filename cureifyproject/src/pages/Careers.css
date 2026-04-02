@@ -9,7 +9,7 @@
 background-image: url('../assets/careersbg.png');
 background-size: cover;
 background-repeat: no-repeat;
-height:94vh;
+height:95vh;
 margin: 0 auto;
     padding-top: 40px;
 /* display: flex;
@@ -18,7 +18,7 @@ justify-content: center;
 align-items: center; */
 }
 .paddingtop{
-   padding-top: 40px;
+   padding-top: 70px;
 }
 .forbutton{
     display: flex;
@@ -27,4 +27,7 @@ align-items: center; */
     align-items: center;
     margin-top: -50px;
 
+}
+.whitebg{
+    background: linear-gradient(180deg, #FBFAF7 0%, #E5F2FF 58.77%, #BEDFFF 100%);
 }
