@@ -36,12 +36,26 @@ const Careers = () => {
        
         <FilledButton btext="View Open Roles"/>
     </div>
+
+
+            <div className=' careersbg'>
+ <div className='titlewdes2 paddingtop'>
+            <p className='grey white fsize'>Build Technology <span className='greentext'>That Simplifies Healing.</span></p>
+            <p className='valuedess white'>Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you with timely notifications and easy tracking—keeping your health organized and stress-free.</p>
+        </div>
      <div style={{ height: '600px', position: 'relative' }}>
   <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}
  
   scrollSpeed={2}
  
 />
+
+</div>
+<div className='forbutton'>
+
+        <FilledButton btext="View Open Roles"/>
+</div>
+
 </div>
         </>
     );
