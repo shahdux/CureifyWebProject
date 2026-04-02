@@ -1,0 +1,60 @@
+.bogcards{
+    border-radius: 10px;
+background: #FFF;
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+padding: 25px;
+height: 538px;
+}
+.blogtitle{
+    color: #36404D;
+font-family: Arial;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 31.016px; /* 129.234% */
+margin: 0;
+}
+.blogdes{
+    color: #36404D;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 31.016px; /* 193.85% */
+    width: 562px;
+
+}
+.greentext{
+    color: #00A4AA;
+}
+.blogdesdiv{
+    margin-top: 20px;
+}
+
+.bogcards:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.bogcards:hover .blogtitle {
+    color: #0aafa0;
+    transition: color 0.3s ease;
+}
+
+
+
+
+@media (max-width: 700px) {
+    .bogcards{
+
+        width: 400px;
+            height: 488px;
+    }
+    .blogimage{
+        width: 100%;
+    }
+    .blogdes {
+   
+    width: 400px;
+}
+}
