@@ -1,0 +1,13 @@
+.fsize{
+    font-size: 56px;
+    margin: 0;
+}
+.white{
+    color: white;
+}
+.careersbg{
+background-image: url('../assets/careersbg.png');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+}
