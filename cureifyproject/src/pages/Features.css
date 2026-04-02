@@ -301,6 +301,8 @@ margin: 0;
 .w400px{
   width: auto;
   padding: 0px 200px;
+          /* position: sticky;
+        top: 110px; */
 }
 .forcardsd{
   display: flex;

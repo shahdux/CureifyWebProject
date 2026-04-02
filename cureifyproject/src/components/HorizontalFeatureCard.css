@@ -2,17 +2,29 @@
   display: flex;
 height: auto;
 width: 1163px;
-border-radius: 16px;
+border-radius: 24px;
 background: linear-gradient(180deg, #145EB0 0%, #08284A 100%);
 box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.10);
-justify-content: center;
+justify-content: flex-start;
     align-items: center;
     gap: 20px;
-        /* padding-right: 30px; */
-        /* position: sticky;
-        top: 250px; */
+    
+        position: sticky; 
+  
+  transition: transform 0.3s ease-out;
+  margin-bottom: 40px;
+        top: 250px;
+                overflow: hidden;
+                /* box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.2); */
+                box-shadow: 
+    0 -10px 30px rgba(47, 77, 120, 0.4), /* Top deep blue glow */
+    0 20px 40px rgba(3, 27, 68, 0.3);  /* Bottom heavier shadow */
+    
         
-        
+}
+/* Optional: Slight scaling for cards underneath to create depth */
+.fcard2:not(:last-child) {
+    transform: scale(0.98);
 }
 .feattitle{
     color: #FFF;
@@ -33,6 +45,7 @@ font-weight: 400;
 line-height: 22.722px; /* 162.302% */
 margin: 0;
 width: 643px;
+width: 520px;
 }
 .featpg{
     display: flex;

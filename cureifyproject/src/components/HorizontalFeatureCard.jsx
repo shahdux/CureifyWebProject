@@ -41,7 +41,8 @@ const HorizontalFeatureCard = (props) => {
         /* Pass the custom top offset and background color as inline styles */
         <div className='fcard2' style={{ 
             background: props.bgColor, 
-            top: props.stickyTop 
+            top: props.stickyTop,
+            ...props.style // This spreads the transform and zIndex
         }}>
             <img src={props.feat1img} alt="feature" className='fimages' />
             <img src={circle} alt="circle" className='circle'/>
