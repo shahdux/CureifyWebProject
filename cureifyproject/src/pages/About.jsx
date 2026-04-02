@@ -3,6 +3,7 @@ import "./About.css"
 import Navbar from '../components/Navbar';
 import about from "../assets/aboutbg.svg";
 import micon from "../assets/micon.svg";
+import vision from "../assets/visionimg.svg";
 
 import video from "../assets/video.mp4";
 
@@ -61,7 +62,24 @@ const About = () => {
     
     
     
-    
+      <div className='aboutdiv vission'>
+              
+              
+
+               
+                <div className='about-overlay' />
+
+                <div className='about-left ml'>
+                    <h1 className='about-title'>Our Vision</h1>
+                    <p className='about-des widthauto'>
+                       “To create a world where managing medication is effortless, accessible, and empowering—enabling every person to take control of their  health with confidence and clarity.”
+                    </p>
+                </div>
+
+                <div className='about-right'>
+                    <img src={vision} alt="robotic hand" className='about-phone' />
+                </div>
+    </div>
     
     
     
