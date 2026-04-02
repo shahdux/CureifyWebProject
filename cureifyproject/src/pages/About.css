@@ -65,6 +65,9 @@ width: 560px;
 background-image: url('../assets/missionbg.png');
 background-size: cover;
 background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
+    z-index: -1;
 /* position: sticky;
 top: 0; */
 }
@@ -103,7 +106,21 @@ justify-content: space-between;
     .ml{
         margin-left: 150px;}
 
-
+.valuedess{
+    color: #36404D;
+text-align: center;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: auto;
+padding: 0px 300px;
+}
+.forvaluesbg{
+height: auto;
+padding: 180px 0px;
+}
 
 
 

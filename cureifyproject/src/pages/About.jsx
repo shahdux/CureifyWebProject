@@ -6,8 +6,12 @@ import micon from "../assets/micon.svg";
 import vision from "../assets/visionimg.svg";
 
 import video from "../assets/video.mp4";
+import ValueCard from '../components/ValueCard';
 
 
+import wclock from "../assets/wclock.svg";
+import health from "../assets/health.svg";
+import gift2 from "../assets/gift.svg";
 const About = () => {
     return ( <>
       <div className='center'>
@@ -80,7 +84,33 @@ const About = () => {
                     <img src={vision} alt="robotic hand" className='about-phone' />
                 </div>
     </div>
+     <div className='pgwithimg2 forvaluesbg'>
+        <div className='titlewdes2'>
+            <p className='grey'>Our Values</p>
+            <p className='valuedess'>Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you with timely notifications and easy tracking—keeping your health organized and stress-free.</p>
+        </div>
     
+        <div className='htwcards'>
+           <ValueCard
+    bgColor="linear-gradient(135deg, #0aafa0 0%, #077a6e 100%)"
+    icon={wclock}
+    title="Never Miss a Dose"
+    des="Get started in minutes with your existing system."
+/>
+<ValueCard
+    bgColor="linear-gradient(135deg, #4a5568 0%, #2d3748 100%)"
+    icon={health}
+    title="Save Time & Effort"
+    des="No more manual searches or calls to pharmacies. Everything you need is organized and ready with a single tap."
+/>
+<ValueCard
+    bgColor="linear-gradient(135deg, #1a3a6e 0%, #0d2347 100%)"
+    icon={gift2}
+    title="Reward Your Commitment"
+    des="Your consistency matters. Earn points and perks simply by staying on track with your health."
+/>
+        </div>
+    </div>
     
     
     
