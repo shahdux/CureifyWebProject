@@ -65,9 +65,7 @@ width: 560px;
 background-image: url('../assets/missionbg.png');
 background-size: cover;
 background-repeat: no-repeat;
-    position: sticky;
-    top: 0;
-    z-index: -1;
+  
 /* position: sticky;
 top: 0; */
 }
@@ -101,6 +99,9 @@ z-index: 2;
 height: auto;
 padding: 60px 0px;
 justify-content: space-between;
+  position: sticky;
+    top: 0;
+    z-index: -1;
 
 }
     .ml{
@@ -121,7 +122,16 @@ padding: 0px 300px;
 height: auto;
 padding: 180px 0px;
 }
+.forvaluesbg .htwcards {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.forvaluesbg:hover .htwcards {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 
@@ -167,6 +177,12 @@ padding: 180px 0px;
     width: 600px;
   
     margin-left: 0;
+}
+.valuedess{
+    padding: 0px 100px;
+}
+.forvaluesbg{
+    padding: 100px 0px;
 }
 }
 
@@ -227,5 +243,9 @@ margin: 0;
 }
  .ml{
         margin-left: 30px;}
+        .valuedess{
+            padding: 0px 40px;
+           font-size: 16px;
+        }
 
 }

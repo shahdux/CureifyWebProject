@@ -12,6 +12,8 @@ import ValueCard from '../components/ValueCard';
 import wclock from "../assets/wclock.svg";
 import health from "../assets/health.svg";
 import gift2 from "../assets/gift.svg";
+import Footer from '../components/Footer';
+import DownloadApp from '../components/DownloadApp';
 const About = () => {
     return ( <>
       <div className='center'>
@@ -111,7 +113,9 @@ const About = () => {
 />
         </div>
     </div>
-    
+      <DownloadApp />
+                
+                <Footer />
     
     
     

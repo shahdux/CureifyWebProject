@@ -56,17 +56,3 @@ align-items: start;
     margin: 0;
 }
 
-@media (max-width: 900px) {
-    .valuecard {
-        width: 260px;
-        height: 200px;
-    }
-}
-
-@media (max-width: 560px) {
-    .valuecard {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-    }
-}
