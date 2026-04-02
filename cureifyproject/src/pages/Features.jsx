@@ -63,6 +63,10 @@ const Features = () => {
           feattitle="AI-Powered Prescription Scanner"
           featdes="Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically organizing your medicine with 100% accuracy."
           />
+          <HorizontalFeatureCard feat1img={feat1}
+          feattitle="AI-Powered Prescription Scanner"
+          featdes="Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically organizing your medicine with 100% accuracy."
+          />
         </div>
       </div>
         </>
