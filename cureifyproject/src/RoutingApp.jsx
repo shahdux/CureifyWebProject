@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Features from './pages/Features';
 import Blogs from './pages/Blogs';
+import About from './pages/About';
 const RoutingApp = () => {
     return ( 
         <>
@@ -11,6 +12,8 @@ const RoutingApp = () => {
           <Route path='/' element={<Home />} />
            <Route path='/features' element={<Features />} />
                       <Route path='/blogs' element={<Blogs />} />
+                                            <Route path='/about' element={<About />} />
+
 
           
 
