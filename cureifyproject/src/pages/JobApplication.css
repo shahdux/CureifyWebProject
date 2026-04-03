@@ -6,6 +6,7 @@
     margin: 0 auto;
     padding: 130px 0 80px;
     gap: 16px;
+     align-items: flex-start;
 }
 
 .jobapp-back {

@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import backarrow from "../assets/back.svg";
 import upload from "../assets/upload.svg";
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,7 +18,10 @@ const JobApplication = () => {
             </div>
 
             <div className='jobapp-container'>
+                  <Link to ="/careers" style={{ textDecoration: "none" }}>
+                  
                 <p className='jobapp-back' ><img src={backarrow} alt="back" className='jobapp-back-icon' />Back to Careers</p>
+                  </Link>
                  
 
                 <div className='jobapp-card'>
