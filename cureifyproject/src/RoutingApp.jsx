@@ -10,6 +10,8 @@ import Download from './pages/Download';
 import Error from './pages/Error';
 import JobApplication from './pages/JobApplication';
 import BlogDetails from './pages/BlogDetails';
+import FeatureDetails from './pages/FeatureDetails';
+
 
 const RoutingApp = () => {
     return ( 
@@ -26,6 +28,10 @@ const RoutingApp = () => {
      <Route path="*" element={<Error />} />
           <Route path="job-applications" element={<JobApplication />} />
                     <Route path="blog-details" element={<BlogDetails />} />
+                                        <Route path="feature-details" element={<FeatureDetails />} />
+
+                              
+
 
 
 

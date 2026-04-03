@@ -1,0 +1,40 @@
+.stepcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.stepcard-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #0aafa0 0%, #077a6e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+
+
+.stepcard-title {
+ color: #36404D;
+text-align: center;
+font-family: Arial;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    margin: 0;
+    margin-top: 12px;
+}
+
+.stepcard-des {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    max-width: 295px;
+}
