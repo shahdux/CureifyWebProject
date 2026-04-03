@@ -8,6 +8,7 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Download from './pages/Download';
 import Error from './pages/Error';
+import JobApplication from './pages/JobApplication';
 
 const RoutingApp = () => {
     return ( 
@@ -22,6 +23,8 @@ const RoutingApp = () => {
       <Route path='/about' element={<About />} />
      <Route path='/download' element={<Download />} />
      <Route path="*" element={<Error />} />
+          <Route path="job-applications" element={<JobApplication />} />
+
 
 
 
