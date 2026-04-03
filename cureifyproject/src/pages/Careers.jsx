@@ -9,6 +9,12 @@ import FilledButton from '../components/FilledButton';
 import CircularGallery from '../components/CircularGallery';
 import FeatureCard from '../components/FeatureCard';
 import JobCard from '../components/JobCard';
+import ValueCard from '../components/ValueCard';
+import wclock from "../assets/wclock.svg";
+import health from "../assets/health.svg";
+import gift2 from "../assets/gift.svg";
+import DownloadApp from '../components/DownloadApp';
+import Footer from '../components/Footer';
 
 
 const Careers = () => {
@@ -40,7 +46,7 @@ const Careers = () => {
 </div>
 
 </div>
- <div className='featuresSection whitebg'>
+ <div className='featuresSection whitebg padding120'>
  <div className='titlewdes2'>
             <p className='grey'>Why Work With Us</p>
             <p className='valuedess'>We’re building a company where people can do their best work while feeling supported and inspired.</p>
@@ -80,8 +86,35 @@ const Careers = () => {
             </div>
             <FilledButton btext="Explore all features" />
         </div>
-
-
+<div className='pgwithimg2 forvaluesbg'>
+        <div className='titlewdes2'>
+            <p className='grey'>Our Values</p>
+            <p className='valuedess'>Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you with timely notifications and easy tracking—keeping your health organized and stress-free.</p>
+        </div>
+    
+        <div className='htwcards'>
+           <ValueCard
+    bgColor="linear-gradient(135deg, #0aafa0 0%, #077a6e 100%)"
+    icon={wclock}
+    title="Never Miss a Dose"
+    des="Get started in minutes with your existing system."
+/>
+<ValueCard
+    bgColor="linear-gradient(135deg, #4a5568 0%, #2d3748 100%)"
+    icon={health}
+    title="Save Time & Effort"
+    des="No more manual searches or calls to pharmacies. Everything you need is organized and ready with a single tap."
+/>
+<ValueCard
+    bgColor="linear-gradient(135deg, #1a3a6e 0%, #0d2347 100%)"
+    icon={gift2}
+    title="Reward Your Commitment"
+    des="Your consistency matters. Earn points and perks simply by staying on track with your health."
+/>
+        </div>
+    </div>
+<DownloadApp />
+<Footer />
         </>
     );
 }

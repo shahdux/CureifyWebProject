@@ -37,3 +37,19 @@ align-items: center; */
 .margin0{
     margin-bottom: 0;
 }
+.padding120{
+    padding: 140px 0px;
+}
+
+
+@media (max-width: 1200px) {
+ 
+
+.careersbg {
+   height: auto;
+    padding: 80px 0px;
+}
+.fsize {
+    font-size: 32px;}
+}
+
