@@ -1,0 +1,98 @@
+.jobcard {
+    
+    padding: 30px 28px;
+   border-radius: 10px;
+background: #FFF;
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+width: 896px;
+
+
+
+justify-content: space-between;
+align-items: center;
+}
+
+.jobcard:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+   
+}
+
+.jobcard-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.jobcard-tag {
+   color: rgba(54, 64, 77, 0.65);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.15px;
+    margin: 0;
+}
+.jobcard-title {
+  color: #36404D;
+font-family: Arial;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px; /* 116.667% */
+letter-spacing: -0.449px;
+    margin: 0;
+}
+
+.jobcard-tags {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+
+
+.jobcard-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.jobcard-apply {
+   color: #01A7AD;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: -0.312px;
+    margin: 0;
+}
+
+.jobcard-arrow {
+    color: #0aafa0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+    .jobcard {
+        width: 80%;
+    }
+
+}
+@media (max-width: 560px) {
+    .jobcard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+
+    .jobcard-tags {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

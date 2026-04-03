@@ -31,3 +31,9 @@ align-items: center; */
 .whitebg{
     background: linear-gradient(180deg, #FBFAF7 0%, #E5F2FF 58.77%, #BEDFFF 100%);
 }
+.bluebgi{
+    background: linear-gradient(180deg, #0053AD 0%, #002247 100%);
+}
+.margin0{
+    margin-bottom: 0;
+}

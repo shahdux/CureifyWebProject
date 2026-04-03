@@ -8,6 +8,7 @@ import ii4 from "../assets/flex.svg";
 import FilledButton from '../components/FilledButton';
 import CircularGallery from '../components/CircularGallery';
 import FeatureCard from '../components/FeatureCard';
+import JobCard from '../components/JobCard';
 
 
 const Careers = () => {
@@ -52,6 +53,35 @@ const Careers = () => {
 <FeatureCard fimg={ii4} fname="Flexibility" fdes="Remote-friendly environment with flexible hours. We value output and well-being over hours at a desk."/>
             </div>
         </div>
+ <div className='featuresSection bluebgi'>
+<div className='titlewdes2'>
+            <p className='grey white margin0'>Open Positions</p>
+            <p className='valuedess white'>Join us in our mission to make care simple and reliable.</p>
+        </div>            <div className='forfeatures'>
+                
+<JobCard
+    title="Senior Product Designer"
+    department="Design"
+    location="Remote / Cairo, EG"
+    type="Full-time"
+/>
+<JobCard
+    title="Senior Frontend Engineer (React)"
+    department="Engineering"
+    location="Remote / London, UK"
+    type="Full-time"
+/>
+<JobCard
+    title="Content Strategist"
+    department="Marketing"
+    location="Cairo, EG"
+    type="Full-time"
+/>
+            </div>
+            <FilledButton btext="Explore all features" />
+        </div>
+
+
         </>
     );
 }
