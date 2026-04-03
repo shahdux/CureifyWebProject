@@ -1,0 +1,102 @@
+.error {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+     background-image: url('../assets/error.png');
+  
+}
+
+
+
+.error-content {
+    position: relative;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 40px 20px;
+}
+
+.error-404 {
+  
+    margin: 0;
+
+    color: #FFF;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 200px;
+font-style: normal;
+font-weight: 400;
+
+   
+}
+
+.error-title {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    color: #FFF;
+font-family: Arial;
+font-size: 42px;
+font-style: normal;
+font-weight: 700;
+margin: 0;
+
+}
+
+.error-des {
+   
+    color: rgba(255, 255, 255, 0.8);
+text-align: center;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+margin: 0;
+margin-bottom: 14px;
+width: 509px;
+   
+
+   
+}
+
+.error-btn {
+    background: #0aafa0;
+    border-radius: 50px;
+    padding: 14px 36px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.error-btn:hover {
+    background: #089488;
+    transform: translateY(-3px);
+}
+
+.error-btn-text {
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+@media (max-width: 560px) {
+    .error-404 {
+        font-size: 100px;
+    }
+
+    .error-title {
+        font-size: 24px;
+    }
+     .error-des {
+        width: 460px;
+    }
+}

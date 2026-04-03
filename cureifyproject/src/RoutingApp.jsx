@@ -7,6 +7,8 @@ import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Download from './pages/Download';
+import Error from './pages/Error';
+
 const RoutingApp = () => {
     return ( 
         <>
@@ -19,6 +21,7 @@ const RoutingApp = () => {
                       <Route path='/contact' element={<Contact />} />
       <Route path='/about' element={<About />} />
      <Route path='/download' element={<Download />} />
+     <Route path="*" element={<Error />} />
 
 
 
