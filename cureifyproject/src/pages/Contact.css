@@ -188,6 +188,40 @@ line-height: 23.28px; /* 145.503% */
 .p2{
     padding-bottom: 80px;
 }
+
+.faqs-grid2 {
+    display: flex;
+   
+   flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    /* align-items: center; */
+  
+}
+.faqs-grid {
+    display: flex;
+   
+  flex-direction: column;
+
+    gap: 16px;
+    /* justify-content: center; */
+    /* align-items: center; */
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1200px) {
 .contactForm{
     width: 80%;
@@ -236,7 +270,20 @@ line-height: 23.28px; /* 145.503% */
 .p2{
     width: 86%;
 }
- 
+ .contactsub{
+    width: 400px;
+
+}
+}
+@media (max-width: 640px) {
+    .faqs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faqs-title {
+        font-size: 24px;
+        text-align: center;
+    }
 }
 @media (max-width: 600px) {
     .bigcontcont{
@@ -274,5 +321,9 @@ line-height: 23.28px; /* 145.503% */
     }
     .padding200 {
     padding: 70px 0px;
+}
+.contactsub{
+    width: 350px;
+
 }
 }

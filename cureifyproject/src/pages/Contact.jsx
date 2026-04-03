@@ -7,6 +7,10 @@ import locimg from "../assets/locimg.svg";
 import mailicon from "../assets/greenmail.svg"
 import website from "../assets/website.svg";
 import numbericon from "../assets/numbericon.svg";
+import FAQs from '../components/FAQs';
+import DownloadApp from '../components/DownloadApp';
+import Footer from '../components/Footer';
+// import FAQs from '../components/FAQs';
 
 // import FAQs from '../components/FAQs';
 
@@ -77,24 +81,30 @@ const Contact = () => {
 
 
 </div>
- {/* <div className='imagewdiv padding200'>
-    <SectionTitle  sectiontitlename="Frequently Asked Questions"/>
-{
-           faqs.map((faq)=>{
-             return   <div className='forvalueCards alignstart'>
-                   <FAQs question={faq.question_EN}
-                   answer={faq.answer_EN}/>
-                             
-                </div>
+ <div className='pgwithimg2 forvaluesbg'>
+        <div className='titlewdes2'>
+            <p className='grey'>Frequently Asked Questions</p>
+            <p className='valuedess'>Find answers to common questions about our service.</p>
+        </div>
+    <div className='faqs-grid2'>
 
-
-
-            })
-          }
-          </div> */}
+        <div className='faqs-grid'>
+        <FAQs question="How does the AI prescription scanner work?" answer="Our AI scans your prescription photo and automatically extracts medication details with high accuracy." />
+        <FAQs question="Is my health data secure?" answer="Yes, all your data is encrypted and stored securely. We never share your information with third parties." />
+        <FAQs question="Can I set medication reminders?" answer="Absolutely. You can set custom reminders for each medication based on your schedule." />
+       
+    </div>
+    <div className='faqs-grid'>
+      
+        <FAQs question="How do I find medicine stock near me?" answer="Our app connects to a verified network of pharmacies and shows you real-time stock availability." />
+        <FAQs question="Is Cureify available in Egypt?" answer="Yes, Cureify is currently available in Egypt with plans to expand to more regions soon." />
+        <FAQs question="How do I upload my blood test results?" answer="Simply take a photo or upload a PDF of your results and our system will analyze and organize them for you." />
+    </div>
+    </div>
+    </div>
          
-
-        
+<DownloadApp />
+<Footer />        
         </>
      );
 }
