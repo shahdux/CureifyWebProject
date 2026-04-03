@@ -373,4 +373,8 @@ background: linear-gradient(180deg, #061859 0%, #264FA3 24.9%, #F4F9FF 94.31%);}
      .sectionTitle{
     font-size: 18px;
   }
+  .w90{
+ width: 85%;
+ font-size: 24px;
+  }      
 }

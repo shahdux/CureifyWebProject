@@ -56,7 +56,7 @@ const Home = () => {
         sectiontitledes="Managing medication shouldn’t feel overwhelming. Between handwritten prescriptions, missed reminders, unavailable medicines, and confusing blood test results — staying consistent becomes harder than it should be. In Egypt, many families still rely on memory, paper notes, or scattered WhatsApp photos to track important treatments. And when life gets busy, health is often the first thing that slips. Keep it emotional. Not feature-heavy." 
         pimage={phone}/>
         <div className='featuresSection'>
-            <p className='titles'>It’s the simplicity of staying on track. It’s your health, handled using…</p>
+            <p className='titles w90'>It’s the simplicity of staying on track. It’s your health, handled using…</p>
             <div className='forfeatures'>
                 
 <FeatureCard fimg={f1} fname="AI Prescription Scanner" fdes="Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo,  automatically populating 

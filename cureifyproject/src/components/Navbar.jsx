@@ -11,9 +11,8 @@ import greenarrow from "../assets/greenarrow.svg";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const location = useLocation(); // Hook to get current URL path
+    const location = useLocation(); 
 
-    // Helper to keep code clean and avoid repeating the Hex code
     const getActiveColor = (path) => location.pathname === path ? "#00A4AA" : "";
 
     return ( 
@@ -59,7 +58,6 @@ const Navbar = () => {
             </div>
         </div>
 
-        {/* Mobile Menu - Apply the same logic here */}
         {menuOpen && (
             <div className='nav-mobile-menu'>
                 <Link to="/features" style={{ textDecoration: "none" }} onClick={() => setMenuOpen(false)}>
