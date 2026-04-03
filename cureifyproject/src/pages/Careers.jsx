@@ -15,6 +15,7 @@ import health from "../assets/health.svg";
 import gift2 from "../assets/gift.svg";
 import DownloadApp from '../components/DownloadApp';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 
 const Careers = () => {
@@ -52,7 +53,7 @@ const Careers = () => {
             <p className='valuedess'>We’re building a company where people can do their best work while feeling supported and inspired.</p>
         </div>
                     <div className='forfeatures'>
-                
+        
 <FeatureCard fimg={ii1} fname="Meaningful Impact" fdes="Everything we build improves real lives. You'll see the direct result of your work in the health of our users."/>
 <FeatureCard fimg={ii2} fname="Growth & Learning" fdes="We believe in mentorship, curiosity, and ownership. We provide annual learning budgets and internal workshops."/>
 <FeatureCard fimg={ii3} fname="Collaborative Culture" fdes="Kindness, transparency, and shared success. We work as a unified team where every voice matters."/>
@@ -64,13 +65,16 @@ const Careers = () => {
             <p className='grey white margin0'>Open Positions</p>
             <p className='valuedess white'>Join us in our mission to make care simple and reliable.</p>
         </div>            <div className='forfeatures'>
-                
+                                                                          <Link  to="/job-applications" style={{ textDecoration: "none" }} >
+      
 <JobCard
     title="Senior Product Designer"
     department="Design"
     location="Remote / Cairo, EG"
     type="Full-time"
 />
+</Link>
+
 <JobCard
     title="Senior Frontend Engineer (React)"
     department="Engineering"
@@ -84,7 +88,6 @@ const Careers = () => {
     type="Full-time"
 />
             </div>
-            <FilledButton btext="Explore all features" />
         </div>
 <div className='pgwithimg2 forvaluesbg'>
         <div className='titlewdes2'>

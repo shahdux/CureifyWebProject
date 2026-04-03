@@ -325,7 +325,7 @@ margin: 0;
   padding: 0px 100px;
     font-size: 24px;
     margin: 0;
-        position: sticky;
+        /* position: sticky; */
     top: 100px;
 
 }

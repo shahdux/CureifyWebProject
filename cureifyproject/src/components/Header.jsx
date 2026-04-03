@@ -6,6 +6,7 @@ import img2 from "../assets/centerimg.svg" ;
 import img3 from "../assets/rightimg.png" ;
 import FilledButton from './FilledButton';
 import StrokeButton from './StrokeButton';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -27,8 +28,14 @@ const Header = () => {
                     <p className='heroText'>All Your Medications. One Simple App.</p>
                     <p className='heroSubtext'>Smart reminders, organized schedules, and peace of mind — right in your pocket.</p>
                     <div className='for2buttons'>
+                         <Link  to="/features" style={{ textDecoration: "none" }} >
+                         
                         <FilledButton btext="Explore Features"/>
+                         </Link>
+                                                <Link  to="/download" style={{ textDecoration: "none" }} >
+
                         <StrokeButton stroketext="  Download Now" />
+                         </Link>
                     </div>
                 </div>
             </div>

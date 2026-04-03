@@ -36,6 +36,7 @@ import i9 from "../assets/i9.svg";
 import FilledButton from '../components/FilledButton';
 import DownloadApp from '../components/DownloadApp';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 
 
@@ -65,7 +66,9 @@ your cart and schedule with 100% accuracy."/>
 <FeatureCard fimg={f4} fname="Blood Test Records" fdes="Stop guessing about your health. Easily upload and compare your blood test results over time to visualize trends and track how your body is responding to treatment."/>
 
             </div>
-            <FilledButton btext="Explore all features" />
+                                                            <Link  to="/features" style={{ textDecoration: "none" }} >
+
+            <FilledButton btext="Explore all features" /></Link>
         </div>
 
       
