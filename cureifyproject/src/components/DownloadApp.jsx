@@ -9,7 +9,7 @@ import DownloadButton from './DownloadButton';
 const DownloadApp = () => {
     return ( 
         <>
-        <div className='downloadSection'>
+        <div className='downloadSection '>
 <img src={bigphone} alt="phone mockup" className='imgpa'/>
 <div className='downloadsecpg'>
     <p className='downloadTitle'>Simplify Your Medication Management & Download Now</p>
