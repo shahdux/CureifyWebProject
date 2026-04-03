@@ -5,6 +5,7 @@ import Features from './pages/Features';
 import Blogs from './pages/Blogs';
 import About from './pages/About';
 import Careers from './pages/Careers';
+import Contact from './pages/Contact';
 const RoutingApp = () => {
     return ( 
         <>
@@ -14,7 +15,9 @@ const RoutingApp = () => {
            <Route path='/features' element={<Features />} />
                       <Route path='/blogs' element={<Blogs />} />
                                             <Route path='/careers' element={<Careers />} />
-                                                                                        <Route path='/about' element={<About />} />
+                                                                                        <Route path='/contact' element={<Contact />} />
+                                                                                                                                                                                <Route path='/about' element={<About />} />
+
 
 
 
