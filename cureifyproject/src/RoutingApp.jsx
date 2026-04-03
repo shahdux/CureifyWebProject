@@ -11,6 +11,7 @@ import Error from './pages/Error';
 import JobApplication from './pages/JobApplication';
 import BlogDetails from './pages/BlogDetails';
 import FeatureDetails from './pages/FeatureDetails';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 
 const RoutingApp = () => {
@@ -26,9 +27,11 @@ const RoutingApp = () => {
       <Route path='/about' element={<About />} />
      <Route path='/download' element={<Download />} />
      <Route path="*" element={<Error />} />
-          <Route path="job-applications" element={<JobApplication />} />
-                    <Route path="blog-details" element={<BlogDetails />} />
-                                        <Route path="feature-details" element={<FeatureDetails />} />
+          <Route path="/job-applications" element={<JobApplication />} />
+                    <Route path="/blog-details" element={<BlogDetails />} />
+                                        <Route path="/feature-details" element={<FeatureDetails />} />
+                                                                                <Route path="/policies" element={<PrivacyPolicy />} />
+
 
                               
 
