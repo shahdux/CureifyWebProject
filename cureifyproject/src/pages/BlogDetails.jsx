@@ -126,6 +126,7 @@ import blog4 from "../assets/blog4.png";
 import blog5 from "../assets/blog5.png";
 import blog6 from "../assets/blog6.svg";
 import { Link, useParams } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const BlogDetails = () => {
     // const { id } = useParams();
@@ -269,6 +270,7 @@ const { key } = useParams();
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

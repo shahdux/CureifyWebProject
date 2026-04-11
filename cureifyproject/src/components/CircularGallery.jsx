@@ -28,7 +28,7 @@ function autoBind(instance) {
   });
 }
 
-function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'black') {
+function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'white') {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
   context.font = font;
