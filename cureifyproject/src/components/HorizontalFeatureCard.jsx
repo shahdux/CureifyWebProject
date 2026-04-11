@@ -18,12 +18,16 @@ const HorizontalFeatureCard = (props) => {
             <div className='featpg'>
                 <div className='feattitle'>{props.feattitle}</div>           
                 <div className='featDes'>{props.featdes}</div>
+
                                                                         <Link  to="/feature-details" style={{ textDecoration: "none" }} >
+
 
                 <div className='textButton'>
                     <p className='learntext'>Learn More</p>
                     <img src={whitea} alt="arrow" />
-                </div></Link>
+                </div>
+                </Link>
+              
             </div>
         </div>
     );

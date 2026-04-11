@@ -145,6 +145,7 @@ import HorizontalFeatureCard from '../components/HorizontalFeatureCard';
 import DownloadApp from '../components/DownloadApp';
 import Footer from '../components/Footer';
 import { supabase } from './../supabase';
+import { Link } from 'react-router-dom';
 
 const Features = () => {
 
@@ -211,6 +212,8 @@ const Features = () => {
                 <p className='titles grey w400px'>Cureify simplifies medication management, health tracking, and more — all in one seamless, intuitive and reliable experience.</p>
                 <div className='forcardsd'>
                     {features.map((feature) => (
+                      // <Link to={`/features/feature${feature.id}`} style={{ textDecoration: "none", display: "block" }}>
+
                         <HorizontalFeatureCard
                             key={feature.id}
                             feat1img={feature.image}
@@ -220,6 +223,7 @@ const Features = () => {
                             stickyTop={feature.sticky_top}
                             style={{ transform: feature.scale }}
                         />
+                        
                     ))}
                 </div>
             </div>
