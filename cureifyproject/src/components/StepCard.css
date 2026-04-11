@@ -6,16 +6,6 @@
     gap: 12px;
 }
 
-.stepcard-icon-wrapper {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #0aafa0 0%, #077a6e 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
 
 
 

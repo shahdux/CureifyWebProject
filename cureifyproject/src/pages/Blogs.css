@@ -4,7 +4,8 @@
     flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  /* width: 80%; */
+ 
   height: auto;
   padding: 100px 0px;
   margin: 0 auto;
@@ -23,13 +24,12 @@
     border-radius: 12px 12px 0 0;
 }
 
+
 .blogs-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-        /* flex-wrap: wrap; */
-        justify-content: center;
-        align-items: center;
-    
+    /* width: 100%; */
 }
 
 
@@ -40,10 +40,13 @@
     padding: 60px 0;
   }
 
-  .blogs-grid {
-    flex-direction: column; /* stack cards */
+  /* .blogs-grid {
+    flex-direction: column;
     gap: 20px;
-  }
+  } */
+    .blogs-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 
@@ -60,6 +63,9 @@
    
     width: 400px;
 }
+   .blogs-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
