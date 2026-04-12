@@ -1,0 +1,42 @@
+.testimonial-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 380px;
+}
+
+.testimonial-stars {
+    color: #F5A623;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+
+.testimonial-review {
+ color: #36404D;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+    margin: 0;
+}
+
+.testimonial-divider {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    margin: 0;
+}
+
+.testimonial-name {
+   color: #36404D;
+font-family: poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+    font-weight: 500;
+    margin: 0;
+}

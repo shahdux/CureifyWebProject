@@ -14,6 +14,7 @@ import BlogDetails from './pages/BlogDetails';
 import FeatureDetails from './pages/FeatureDetails';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Hiw from './pages/Hiw';
+import Testimonials from './pages/Testimonials';
 const ScrollToTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -47,6 +48,8 @@ const RoutingApp = () => {
       <Route path='/blogs/:key' element={<BlogDetails />} />   
             {/* <Route path='/features/:key' element={<FeatureDetails />} />      */}
                  <Route path='/how-it-works' element={<Hiw />} />
+                                  <Route path='/testimonials' element={<Testimonials />} />
+
 
   
                    

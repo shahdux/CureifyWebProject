@@ -1,0 +1,29 @@
+.fortest {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+.forvaluesbgtest{
+    height: auto;
+    padding: 40px 0px 70px 0px;
+        display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+@media (max-width: 1424px) {
+    .fortest {
+        grid-template-columns: repeat(2, 1fr);
+        width: 70%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .fortest {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+}
