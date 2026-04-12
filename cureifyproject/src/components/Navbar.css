@@ -1,12 +1,14 @@
 .nav{
     display: flex;
 width: 1240px;
+width: 80%;
 height: 57px;
 
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 align-items: center;
-gap: 203px;
+/* gap: 203px;
+gap: 15%; */
 border-radius: 200px;
 background: #FFF;
 box-shadow: 0 0 14px 0 rgba(0, 55, 114, 0.02), 0 4px 24px 0 rgba(0, 69, 143, 0.20);
@@ -84,8 +86,13 @@ transition: 0.5s ease;
 @media (max-width: 1280px) {
     .nav {
         width: 90%;
-        gap: 40px;
+        gap: 20px;
     }
+    .forlinks{
+  
+    gap: 10px;
+  
+}
 }
 
 @media (max-width: 1000px) {

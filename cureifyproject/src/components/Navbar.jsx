@@ -35,6 +35,11 @@ const Navbar = () => {
                 <Link to="/careers" style={{ textDecoration: "none" }}>
                     <Navlink linkname="Careers" color={getActiveColor("/careers")} />
                 </Link>
+                 <Link to="/how-it-works" style={{ textDecoration: "none" }}>
+                    <Navlink linkname="How it works" color={getActiveColor("/how-it-works")} />
+                </Link> <Link to="/testimonials" style={{ textDecoration: "none" }}>
+                    <Navlink linkname="Testimonials" color={getActiveColor("/testimonials")} />
+                </Link>
                 <Link to="/contact" style={{ textDecoration: "none" }}>
                     <Navlink linkname="Contact" color={getActiveColor("/contact")} />
                 </Link>
@@ -71,6 +76,11 @@ const Navbar = () => {
                 </Link>
                 <Link to="/careers" style={{ textDecoration: "none" }} onClick={() => setMenuOpen(false)}>
                     <Navlink linkname="Careers" color={getActiveColor("/careers")} />
+                </Link>
+                 <Link to="/how-it-works" style={{ textDecoration: "none" }}>
+                    <Navlink linkname="How it works" color={getActiveColor("/how-it-works")} />
+                </Link> <Link to="/testimonials" style={{ textDecoration: "none" }}>
+                    <Navlink linkname="Testimonials" color={getActiveColor("/testimonials")} />
                 </Link>
                 <Link to="/contact" style={{ textDecoration: "none" }} onClick={() => setMenuOpen(false)}>
                     <Navlink linkname="Contact" color={getActiveColor("/contact")} />

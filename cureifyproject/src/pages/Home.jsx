@@ -79,7 +79,6 @@ your cart and schedule with 100% accuracy."/>
     </div>
 
     <div className='htwcards'>
-        {/* Card 1 */}
         <div className='card1'>
             <img src={step1} alt="" />
             <p className='step1'>1. Add & Organize</p>
@@ -87,7 +86,6 @@ your cart and schedule with 100% accuracy."/>
             <div className='floating-icon'><img src={icon1} alt="scan" /></div>
         </div>
 
-        {/* Card 2 */}
         <div className='card1 green'>
             <img src={step2} alt="" />
             <p className='step1'>2. Stay Consistent</p>
@@ -95,7 +93,6 @@ your cart and schedule with 100% accuracy."/>
             <div className='floating-icon'><img src={icon2} alt="bell" /></div>
         </div>
 
-        {/* Card 3 */}
         <div className='card1 greycard'>
             <img src={step3} alt="" />
             <p className='step1'>3. Find & Understand</p>
@@ -109,11 +106,9 @@ your cart and schedule with 100% accuracy."/>
                     <p className='whiteTitles'>Why Choose Us</p>
                     <p className='whiteDes'>Managing your health shouldn't feel like scattered pieces. We gather your prescriptions, schedules, and health vitals into one intuitive mobile.</p>
                 </div>
-                {/* <img src={phonemock} alt="phone mockup" /> */}
                <div className="w-animation-wrapper">
         <img src={phonemock} alt="phone mockup" className="w-phone-img" />
 
-        {/* Scattered Icons - assigned unique classes for their start positions */}
         <div className="w-icon w-icon-1"><img src={i1} /></div>
         <div className="w-icon w-icon-2"><img src={i2} /></div>
         <div className="w-icon w-icon-3"><img src={i3} /></div>
