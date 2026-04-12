@@ -1,0 +1,113 @@
+.howcard {
+    display: flex;
+    align-items: center;
+ flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+   
+}
+
+
+.howcard-number {
+   font-family: Poppins;
+font-size: 72px;
+font-style: normal;
+font-weight: 700;
+  /* width: 580px; */
+line-height: 72px; /* 100% */
+background: linear-gradient(90deg, #014EA3 0%, #002751 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin: 0;
+margin-bottom: 8px;
+}
+
+.howcard-title {
+    color: #36404D;
+      /* width: 580px; */
+font-family: Poppins;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px; /* 120% */
+    margin: 0;
+}
+
+.howcard-des {
+  color: #36404D;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 155.556% */
+margin: 0
+;
+  width: 580px;
+}
+
+.howcard-reverse {
+    flex-direction: row-reverse;
+}
+
+
+
+@media (max-width: 1400px) {
+   .howcard {
+   
+    gap: 12px;
+  
+   
+}
+
+ 
+}
+@media (max-width: 900px) {
+  
+/* 
+    .howcard-img {
+        width: 80%;
+       
+    }
+    .howcard-des{
+   width: 80%;
+    }
+
+    .howcard-number {
+        font-size: 48px;
+    } */
+
+    .howcard-img  {
+    width: 82%;
+}
+ /* .howcard-des{
+   width: 460px;
+    } */
+    .howcard-number {
+        font-size: 48px;
+    }
+}
+@media (max-width: 700px) {
+  
+
+
+  
+ .howcard-des{
+   width: 460px;
+    }
+    .howcard-number {
+        font-size: 48px;
+    }
+}
+@media (max-width: 600px) {
+  
+
+
+  
+ .howcard-des{
+   width: 400px;
+    }
+   .howcard-img  {
+    width: 95%;
+}
+}

@@ -1,0 +1,15 @@
+.forhitcomp{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+@media (max-width: 1400px) {
+ .forhitcomp{
+  
+    gap: 0px;
+}
+
+}
