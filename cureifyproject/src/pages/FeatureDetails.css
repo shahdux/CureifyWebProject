@@ -48,7 +48,12 @@ filter: blur(32.04999923706055px);
     max-width: 520px;
     margin-left: 40px;
 }
-
+.poasb{
+    position: absolute;
+     max-width: 520px;
+    margin-left: 100px;
+    margin-top: 120px;
+}
 
 
 @media (max-width: 900px) {
@@ -77,4 +82,8 @@ filter: blur(32.04999923706055px);
         height: 40px;
         margin: 0;
     }
+    .featureHero-text {
+   
+    margin-left: 0px;
+}
 }
