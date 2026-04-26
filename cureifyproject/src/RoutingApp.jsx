@@ -15,6 +15,7 @@ import FeatureDetails from './pages/FeatureDetails';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Hiw from './pages/Hiw';
 import Testimonials from './pages/Testimonials';
+import './App.css';
 const ScrollToTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
