@@ -108,6 +108,7 @@ import DownloadApp from '../components/DownloadApp';
 import Footer from '../components/Footer';
 import { supabase } from './../supabase';
 import { useLang } from '../context/LanguageContext'; // Added
+import { Link } from 'react-router-dom';
 
 const Features = () => {
     const [loading, setLoading] = useState(true);
@@ -179,17 +180,19 @@ const Features = () => {
                         : "Cureify simplifies medication management, health tracking, and more — all in one seamless, intuitive and reliable experience."}
                 </p>
                 <div className='forcardsd'>
+                
                     {features.map((feature) => (
-                        <HorizontalFeatureCard
-                            key={feature.id}
-                            feat1img={feature.image}
-                            bgColor={feature.bg_color}
-                            feattitle={isArabic ? feature.name_ar : feature.name_en} // Dynamic Arabic name
-                            featdes={isArabic ? feature.description_ar : feature.description_en} // Dynamic Arabic description
-                            stickyTop={feature.sticky_top}
-                            style={{ transform: feature.scale }}
-                        />
-                    ))}
+    <HorizontalFeatureCard
+        key={feature.id}
+        featureId={feature.id}
+        feat1img={feature.image}
+        bgColor={feature.bg_color}
+        feattitle={isArabic ? feature.name_ar : feature.name_en}
+        featdes={isArabic ? feature.description_ar : feature.description_en}
+        stickyTop={feature.sticky_top}
+        style={{ transform: feature.scale }}
+    />
+))}
                 </div>
             </div>
 

@@ -35,6 +35,20 @@ filter: blur(32.04999923706055px);
 .padding180{
     padding: 180px 0px;
 }
+.featureHero {
+    height: 86vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+    background-size: cover;
+    background-position: center;
+}
+
+.featureHero-text {
+    max-width: 520px;
+    margin-left: 40px;
+}
+
 
 
 @media (max-width: 900px) {
@@ -48,6 +62,10 @@ filter: blur(32.04999923706055px);
         align-items: center;
         gap: 30px;
         width: 90%;
+    }
+       .featureHero {
+        padding: 30px;
+        min-height: 70vh;
     }
       .benefits-grid {
         grid-template-columns: 1fr;

@@ -95,4 +95,7 @@ letter-spacing: -0.312px;
         flex-wrap: wrap;
         gap: 8px;
     }
+        .jobcard {
+        width: 370px;
+    }
 }

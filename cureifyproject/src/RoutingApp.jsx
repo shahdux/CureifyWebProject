@@ -41,7 +41,7 @@ const RoutingApp = () => {
      <Route path="*" element={<Error />} />
           {/* <Route path="/job-applications" element={<JobApplication />} /> */}
                     {/* <Route path="/blog-details" element={<BlogDetails />} /> */}
-                                        <Route path="/feature-details" element={<FeatureDetails />} />
+                                        {/* <Route path="/feature-details" element={<FeatureDetails />} /> */}
                                         
                                                                                 <Route path="/policies" element={<PrivacyPolicy />} />
 
@@ -54,7 +54,7 @@ const RoutingApp = () => {
 
   <Route path="/job-application/:id" element={<JobApplication />} />
                    
-
+<Route path="/feature-details/:id" element={<FeatureDetails />} />
 
 
 
