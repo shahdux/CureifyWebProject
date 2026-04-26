@@ -116,7 +116,8 @@ const Careers = () => {
 
                 <div className='forfeatures'>
                     {jobs.map((job) => (
-                        <Link key={job.id} to="/job-applications" style={{ textDecoration: "none" }}>
+                        <Link to={`/job-application/${job.id}`} style={{ textDecoration: "none" }}>
+                      
                             <JobCard
                                 title={isArabic ? job.title_ar : job.title_en}
                                 department={isArabic ? job.department_ar : job.department_en}
