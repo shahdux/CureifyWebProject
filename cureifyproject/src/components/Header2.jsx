@@ -6,9 +6,11 @@ import icon2 from "../assets/icon2.svg";
 import icon3 from "../assets/icon3.svg";
 import icon4 from "../assets/icon4.svg";
 import { Link } from 'react-router-dom';
+import { useLang } from '../context/LanguageContext';
 
 
 const Header2 = (props) => {
+    const { isArabic } = useLang(); 
     return ( <>
     
     <div className='pgwithimg'>
@@ -16,7 +18,7 @@ const Header2 = (props) => {
             <p className='sectionTitle'>{props.sectiontitlename}</p>
              <p className='sectionDes'>{props.sectiontitledes}</p>
                                                              <Link  to="/about" style={{ textDecoration: "none" }} >
-             <FilledButton btext="Learn More"/>
+             <FilledButton btext={isArabic ? "تعرف على المزيد" : "Learn More"}/>
                                                              </Link>
 
         </div>
