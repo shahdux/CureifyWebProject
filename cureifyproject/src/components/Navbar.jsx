@@ -57,9 +57,14 @@ const Navbar = () => {
     </div>
                 </Link>
             </div>
-
+            <div className='for2actionss'>
+<div className='langbutton'>
+    <p className='langb'>AR</p>
+</div>
             <div className='nav-hamburger' onClick={() => setMenuOpen(!menuOpen)}>
                 <img src={menuicon} alt="menu" className='nav-menu-icon' />
+            </div>
+
             </div>
         </div>
 
