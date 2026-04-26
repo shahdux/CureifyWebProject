@@ -157,7 +157,11 @@ const Careers = () => {
         callGetAPI();
     }, []);
 
-    if (loading) return <p>Loading...</p>;
+   if (loading) return (
+    <div className="loader-container">
+        <div className="spinner"></div>
+    </div>
+);
 
     return (
         <>

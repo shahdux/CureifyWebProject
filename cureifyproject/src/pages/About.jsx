@@ -35,7 +35,11 @@ const About = () => {
     const missionHeader = headers.find(row => row.id === 4);
     const visionHeader  = headers.find(row => row.id === 5);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return (
+    <div className="loader-container">
+        <div className="spinner"></div>
+    </div>
+);
 
     return (
         <>
