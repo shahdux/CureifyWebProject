@@ -7,6 +7,7 @@ import Navlink from './Navlink';
 import smalllogo from "../assets/smalllogo.svg";
 import menuicon from "../assets/menuicon.svg";
 import greenarrow from "../assets/greenarrow.svg";
+import { useLang } from '../context/LanguageContext';
 
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
     const location = useLocation(); 
 
     const getActiveColor = (path) => location.pathname === path ? "#00A4AA" : "";
-
+const { toggleLang, isArabic } = useLang();
     return ( 
         <>
         <div className='nav'>
@@ -58,8 +59,8 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className='for2actionss'>
-<div className='langbutton'>
-    <p className='langb'>AR</p>
+<div onClick={toggleLang} className='langbutton'>
+    <p className='langb'>  {isArabic ? 'EN' : 'AR'}</p>
 </div>
             <div className='nav-hamburger' onClick={() => setMenuOpen(!menuOpen)}>
                 <img src={menuicon} alt="menu" className='nav-menu-icon' />
