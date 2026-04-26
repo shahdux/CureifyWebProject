@@ -4,9 +4,11 @@ import bagicon from "../assets/depart.svg";
 import locationicon from "../assets/loc.svg";
 import clockicon from "../assets/clockc.svg";
 import greenarrow from "../assets/greenarrow.svg";
+import { useLang } from '../context/LanguageContext';
 
 
 const JobCard = (props) => {
+    const { isArabic } = useLang(); 
     return (
         <div className='jobcard'>
             <div className='jobcard-left'>
@@ -21,8 +23,10 @@ const JobCard = (props) => {
                 </div>
             </div>
             <div className='jobcard-right'>
-                <p className='jobcard-apply'>Apply Now</p>
-               <img src={greenarrow} alt="green arrow" />
+                <p className='jobcard-apply'>
+    {isArabic ? "قدّم الآن" : "Apply Now"}
+</p>
+               <img style={{ transform: isArabic ? 'scaleX(-1)' : 'none' }} src={greenarrow} alt="green arrow" />
             </div>
         </div>
     );

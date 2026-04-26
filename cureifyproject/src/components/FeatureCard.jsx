@@ -5,7 +5,10 @@ const FeatureCard = (props) => {
         <>
        
 
-        <div className='fcard'>
+        <div className='fcard' style={{ 
+                    
+                    height: props.height
+                }}>
             <img src={props.fimg} alt="feature icon" />
             <p className='featureName'>{props.fname}</p>
                         <p className='featureDes'>{props.fdes}</p>
