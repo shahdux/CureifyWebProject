@@ -1,6 +1,4 @@
-
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import "./Careers.css";
 import Navbar from '../components/Navbar';
 import FilledButton from '../components/FilledButton';
@@ -14,46 +12,37 @@ import { Link } from 'react-router-dom';
 import { supabase } from '../supabase';
 import { useLang } from '../context/LanguageContext';
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-};
-
-const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.15
-        }
-    }
-};
-
 const Careers = () => {
     const { isArabic } = useLang();
     const [loading, setLoading] = useState(true);
-    const [header, setHeader] = useState("");
-    const [benefits, setBenefits] = useState("");
-    const [jobs, setJobs] = useState("");
-    const [values, setValues] = useState("");
+    const [header, setHeader] = useState(null);
+    const [benefits, setBenefits] = useState([]);
+    const [jobs, setJobs] = useState([]);
+    const [values, setValues] = useState([]);
 
-  
     useEffect(() => {
-    async function fetchData() {
-        const headerRes = await supabase.from("Header").select("*").eq("id", 6).single();
-        const benefitsRes = await supabase.from("Work_Benefits").select("*");
-        const jobsRes = await supabase.from("Careers").select("*");
-        const valuesRes = await supabase.from("Values").select("*");
+        async function fetchData() {
+            try {
+                const [headerRes, benefitsRes, jobsRes, valuesRes] = await Promise.all([
+                    supabase.from("Header").select("*").eq("id", 6).single(),
+                    supabase.from("Work_Benefits").select("*"),
+                    supabase.from("Careers").select("*"),
+                    supabase.from("Values").select("*")
+                ]);
 
-        setHeader(headerRes.data);
-        setBenefits(benefitsRes.data);
-        setJobs(jobsRes.data);
-        setValues(valuesRes.data);
-        setLoading(false);
-    }
+                setHeader(headerRes.data);
+                setBenefits(benefitsRes.data);
+                setJobs(jobsRes.data);
+                setValues(valuesRes.data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            } finally {
+                setLoading(false);
+            }
+        }
 
-    fetchData();
-}, []);
+        fetchData();
+    }, []);
 
     if (loading) return (
         <div className="loader-container">
@@ -68,13 +57,7 @@ const Careers = () => {
             </div>
 
             <div className='careersbg'>
-                <motion.div 
-                    className='titlewdes2 paddingtop'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                >
+                <div className='titlewdes2 paddingtop'>
                     <p className='grey white fsize'>
                         {isArabic ? header?.title_AR : header?.title_en}{" "}
                         <span className='greentext'>
@@ -84,126 +67,88 @@ const Careers = () => {
                     <p className='valuedess white'>
                         {isArabic ? header?.description_AR : header?.description_en}
                     </p>
-                </motion.div>
-                
+                </div>
+
                 <div style={{ height: '600px', position: 'relative' }}>
                     <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} scrollSpeed={2} />
                 </div>
-                
-                <motion.div 
-                    className='forbutton'
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                >
+
+                <div className='forbutton'>
                     <FilledButton btext={isArabic ? (header?.button1_AR || "عرض الوظائف") : (header?.button1 || "View Open Roles")} />
-                </motion.div>
+                </div>
             </div>
 
             <div className='featuresSection whitebg padding120'>
-                <motion.div 
-                    className='titlewdes2'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                >
+                <div className='titlewdes2'>
                     <p className='grey'>{isArabic ? "لماذا تعمل معنا" : "Why Work With Us"}</p>
                     <p className='valuedess'>
-                        {isArabic 
-                            ? "نحن نبني شركة حيث يمكن للناس القيام بأفضل أعمالهم بينما يشعرون بالدعم والإلهام." 
+                        {isArabic
+                            ? "نحن نبني شركة حيث يمكن للناس القيام بأفضل أعمالهم بينما يشعرون بالدعم والإلهام."
                             : "We're building a company where people can do their best work while feeling supported and inspired."}
                     </p>
-                </motion.div>
-                
-                <motion.div 
-                    className='forfeatures'
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    {benefits.map((benefit) => (
-                        <motion.div key={benefit.id} variants={fadeUp}>
-                            <FeatureCard 
-                            height="280px"
-                                fimg={benefit.icon} 
-                                fname={isArabic ? benefit.title_ar : benefit.title_en} 
-                                fdes={isArabic ? benefit.description_ar : benefit.description_en} 
+                </div>
+
+                <div className='forfeatures'>
+                    {benefits.map((benefit, index) => (
+                        <div
+                            key={benefit.id}
+                            className="slideCard"
+                            style={{ animationDelay: `${index * 0.15}s` }}
+                        >
+                            <FeatureCard
+                                height="280px"
+                                fimg={benefit.icon}
+                                fname={isArabic ? benefit.title_ar : benefit.title_en}
+                                fdes={isArabic ? benefit.description_ar : benefit.description_en}
                             />
-                        </motion.div>
+                        </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
 
             <div className='featuresSection bluebgi'>
-                <motion.div 
-                    className='titlewdes2'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                >
+                <div className='titlewdes2'>
                     <p className='grey white margin0'>{isArabic ? "الوظائف المتاحة" : "Open Positions"}</p>
-                    <p className='valuedess white'>{isArabic ? "انضم إلينا في مهمتنا لجعل الرعاية بسيطة وموثوقة." : "Join us in our mission to make care simple and reliable."}</p>
-                </motion.div>
-                
-                <motion.div 
-                    className='forfeatures'
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
+                    <p className='valuedess white'>
+                        {isArabic ? "انضم إلينا في مهمتنا لجعل الرعاية بسيطة وموثوقة." : "Join us in our mission to make care simple and reliable."}
+                    </p>
+                </div>
+
+                <div className='forfeatures'>
                     {jobs.map((job) => (
-                        <motion.div key={job.id} variants={fadeUp}>
-                            <Link to="/job-applications" style={{ textDecoration: "none" }}>
-                                <JobCard
-                                    title={isArabic ? job.title_ar : job.title_en}
-                                    department={isArabic ? job.department_ar : job.department_en}
-                                    location={isArabic ? job.location_ar : job.location_en}
-                                    type={isArabic ? job.time_ar : job.time_en}
-                                />
-                            </Link>
-                        </motion.div>
+                        <Link key={job.id} to="/job-applications" style={{ textDecoration: "none" }}>
+                            <JobCard
+                                title={isArabic ? job.title_ar : job.title_en}
+                                department={isArabic ? job.department_ar : job.department_en}
+                                location={isArabic ? job.location_ar : job.location_en}
+                                type={isArabic ? job.time_ar : job.time_en}
+                            />
+                        </Link>
                     ))}
-                </motion.div>
+                </div>
             </div>
 
             <div className='pgwithimg2 forvaluesbg'>
-                <motion.div 
-                    className='titlewdes2'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                >
+                <div className='titlewdes2'>
                     <p className='grey'>{isArabic ? "قيمنا" : "Our Values"}</p>
                     <p className='valuedess'>
-                        {isArabic 
-                            ? "إدارة أدويتك بسيطة. ما عليك سوى إضافة وصفاتك الطبية، وضبط التذكيرات، وترك التطبيق يرشدك." 
+                        {isArabic
+                            ? "إدارة أدويتك بسيطة. ما عليك سوى إضافة وصفاتك الطبية، وضبط التذكيرات، وترك التطبيق يرشدك."
                             : "Managing your medications is simple. Just add your prescriptions, set reminders, and let the app guide you."}
                     </p>
-                </motion.div>
-                
-                <motion.div 
-                    className='htwcards'
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
+                </div>
+
+                <div className='htwcards'>
                     {values.map((val) => (
-                        <motion.div key={val.id} variants={fadeUp}>
-                            <ValueCard 
-                                bgColor={val.bgcolor} 
-                                icon={val.icon} 
-                                title={isArabic ? val.title_AR : val.title_en} 
-                                des={isArabic ? val.description_AR : val.description_en} 
-                            />
-                        </motion.div>
+                        <ValueCard
+                            key={val.id}
+                            bgColor={val.bgcolor}
+                            icon={val.icon}
+                            title={isArabic ? val.title_AR : val.title_en}
+                            des={isArabic ? val.description_AR : val.description_en}
+                        />
                     ))}
-                </motion.div>
+                </div>
             </div>
 
             <DownloadApp />
