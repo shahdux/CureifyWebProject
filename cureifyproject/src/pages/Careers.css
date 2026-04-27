@@ -46,6 +46,10 @@ align-items: center; */
     transform: translateX(-40px);
     animation: slideIn 0.6s ease forwards;
 }
+.pr{
+    position: relative;
+    z-index: 5;
+}
 
 @keyframes slideIn {
     to {

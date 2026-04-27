@@ -73,9 +73,9 @@ const Careers = () => {
                     <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} scrollSpeed={2} />
                 </div>
 
-                <div className='forbutton'>
-                    <FilledButton btext={isArabic ? (header?.button1_AR || "عرض الوظائف") : (header?.button1 || "View Open Roles")} />
-                </div>
+               <div className='forbutton pr' onClick={() => document.getElementById('open-positions').scrollIntoView({ behavior: 'smooth' })}>
+    <FilledButton btext={isArabic ? (header?.button1_AR || "عرض الوظائف") : (header?.button1 || "View Open Roles")} />
+</div>
             </div>
 
             <div className='featuresSection whitebg padding120'>
@@ -106,7 +106,7 @@ const Careers = () => {
                 </div>
             </div>
 
-            <div className='featuresSection bluebgi'>
+            <div className='featuresSection bluebgi' id="open-positions">
                 <div className='titlewdes2'>
                     <p className='grey white margin0'>{isArabic ? "الوظائف المتاحة" : "Open Positions"}</p>
                     <p className='valuedess white'>
