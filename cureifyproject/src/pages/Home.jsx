@@ -30,6 +30,14 @@ import DownloadApp from '../components/DownloadApp';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { useLang } from '../context/LanguageContext';
+import { motion } from 'framer-motion';
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 32 },
+    visible: { opacity: 1, y: 0 }
+};
+
+const vp = { once: true, amount: 0.2 };
 
 const Home = () => {
     const { isArabic } = useLang();
@@ -50,38 +58,55 @@ const Home = () => {
             pimage={phone}
         />
 
-        <div className='featuresSection'>
-            <p className='titles w90'>
-                {isArabic
-                    ? "إنها بساطة البقاء على المسار الصحيح. صحتك، بين يديك…"
-                    : "It's the simplicity of staying on track. It's your health, handled using…"}
-            </p>
-            <div className='forfeatures'>
-                <FeatureCard fimg={f1}
-                    fname={isArabic ? "ماسح الوصفات بالذكاء الاصطناعي" : "AI Prescription Scanner"}
-                    fdes={isArabic
-                        ? "أوقف عناء البحث اليدوي. يستخرج الذكاء الاصطناعي لدينا كل تفاصيل وصفتك الطبية من صورة واحدة فورًا، ويملأ تلقائيًا سلة مشترياتك وجدولك بدقة 100%."
-                        : "Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically populating your cart and schedule with 100% accuracy."} />
-                <FeatureCard fimg={f2}
-                    fname={isArabic ? "مكافآت الالتزام" : "Adherence Rewards"}
-                    fdes={isArabic
-                        ? "على عكس المنصات الأخرى التي تكافئ المشتريات فقط، نحن نكافئ الاتساق. اكسب نقاطًا مقابل تناول دوائك في الوقت المحدد والالتزام بخطة علاجك."
-                        : "Unlike other platforms that only reward purchases, we reward consistency. Earn points for taking your medicine on time and staying on track with your treatment."} />
-                <FeatureCard fimg={f3}
-                    fname={isArabic ? "دقة المخزون في الوقت الفعلي" : "Real-Time Stock Accuracy"}
-                    fdes={isArabic
-                        ? "لا مزيد من الإلغاءات المفاجئة. يضمن تكاملنا المباشر مع شبكة موثّقة من الصيدليات أن ما تراه متوفر فعلًا على الرف."
-                        : "No more surprise cancellations. Our direct integration with a verified network of pharmacies ensures what you see is actually on the shelf."} />
-                <FeatureCard fimg={f4}
-                    fname={isArabic ? "سجلات تحاليل الدم" : "Blood Test Records"}
-                    fdes={isArabic
-                        ? "أوقف التخمين بشأن صحتك. ارفع نتائج تحاليلك بسهولة وقارنها عبر الزمن لتتبع الاتجاهات ومعرفة استجابة جسمك للعلاج."
-                        : "Stop guessing about your health. Easily upload and compare your blood test results over time to visualize trends and track how your body is responding to treatment."} />
-            </div>
-            <Link to="/features" style={{ textDecoration: "none" }}>
-                <FilledButton btext={isArabic ? "استكشف جميع المميزات" : "Explore all features"} />
-            </Link>
-        </div>
+       <div className='featuresSection'>
+    <motion.p
+        className='titles w90'
+        variants={fadeUp} initial="hidden" whileInView="visible"
+        transition={{ duration: 0.6 }} viewport={vp}
+    >
+        {isArabic
+            ? "إنها بساطة البقاء على المسار الصحيح. صحتك، بين يديك…"
+            : "It's the simplicity of staying on track. It's your health, handled using…"}
+    </motion.p>
+    <div className='forfeatures'>
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0 }} viewport={vp}>
+            <FeatureCard fimg={f1}
+                fname={isArabic ? "ماسح الوصفات بالذكاء الاصطناعي" : "AI Prescription Scanner"}
+                fdes={isArabic
+                    ? "أوقف عناء البحث اليدوي. يستخرج الذكاء الاصطناعي لدينا كل تفاصيل وصفتك الطبية من صورة واحدة فورًا، ويملأ تلقائيًا سلة مشترياتك وجدولك بدقة 100%."
+                    : "Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically populating your cart and schedule with 100% accuracy."} />
+        </motion.div>
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.1 }} viewport={vp}>
+            <FeatureCard fimg={f2}
+                fname={isArabic ? "مكافآت الالتزام" : "Adherence Rewards"}
+                fdes={isArabic
+                    ? "على عكس المنصات الأخرى التي تكافئ المشتريات فقط، نحن نكافئ الاتساق. اكسب نقاطًا مقابل تناول دوائك في الوقت المحدد والالتزام بخطة علاجك."
+                    : "Unlike other platforms that only reward purchases, we reward consistency. Earn points for taking your medicine on time and staying on track with your treatment."} />
+        </motion.div>
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.2 }} viewport={vp}>
+            <FeatureCard fimg={f3}
+                fname={isArabic ? "دقة المخزون في الوقت الفعلي" : "Real-Time Stock Accuracy"}
+                fdes={isArabic
+                    ? "لا مزيد من الإلغاءات المفاجئة. يضمن تكاملنا المباشر مع شبكة موثّقة من الصيدليات أن ما تراه متوفر فعلًا على الرف."
+                    : "No more surprise cancellations. Our direct integration with a verified network of pharmacies ensures what you see is actually on the shelf."} />
+        </motion.div>
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.3 }} viewport={vp}>
+            <FeatureCard fimg={f4}
+                fname={isArabic ? "سجلات تحاليل الدم" : "Blood Test Records"}
+                fdes={isArabic
+                    ? "أوقف التخمين بشأن صحتك. ارفع نتائج تحاليلك بسهولة وقارنها عبر الزمن لتتبع الاتجاهات ومعرفة استجابة جسمك للعلاج."
+                    : "Stop guessing about your health. Easily upload and compare your blood test results over time to visualize trends and track how your body is responding to treatment."} />
+        </motion.div>
+    </div>
+    <motion.div
+        variants={fadeUp} initial="hidden" whileInView="visible"
+        transition={{ duration: 0.6, delay: 0.4 }} viewport={vp}
+    >
+        <Link to="/features" style={{ textDecoration: "none" }}>
+            <FilledButton btext={isArabic ? "استكشف جميع المميزات" : "Explore all features"} />
+        </Link>
+    </motion.div>
+</div>
 
         <div className='pgwithimg2'>
             <div className='titlewdes'>
