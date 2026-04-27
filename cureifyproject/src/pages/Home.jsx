@@ -206,7 +206,16 @@ const Home = () => {
                     />
                 ))}
             </div>
-        </div>
+<motion.p
+    className='endingtext'
+    variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+    initial="hidden"
+    whileInView="visible"
+    transition={{ duration: 0.7 }}
+    viewport={{ once: true, amount: 0.5 }}
+>
+    We bring clarity, safety, and control — all in one place.
+</motion.p>        </div>
 
         <DownloadApp />
         <Footer />
