@@ -8,7 +8,7 @@ const FilledButton = (props) => {
     
     return ( 
         <>
-        <div className='filledButton'>
+        <div className='filledButton' onClick={props.onClick}>
             <p className='buttontext'>{props.btext}</p>
             <img src={arrow} alt="logo" style={{ transform: isArabic ? 'scaleX(-1)' : 'none' }}/>
 

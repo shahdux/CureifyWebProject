@@ -89,7 +89,7 @@ const JobApplication = () => {
 
                         <div className='jobapp-row'>
                             <div className='jobapp-field'>
-                                <p className='jobapp-label'>{isArabic ? 'الاسم الأول *' : 'First Name *'}</p>
+                                <p className='jobapp-label'>{isArabic ? 'الاسم الأول' : 'First Name'}</p>
                                 <input
                                     className='jobapp-input'
                                     type="text"
@@ -97,7 +97,7 @@ const JobApplication = () => {
                                 />
                             </div>
                             <div className='jobapp-field'>
-                                <p className='jobapp-label'>{isArabic ? 'الاسم الأخير *' : 'Last Name *'}</p>
+                                <p className='jobapp-label'>{isArabic ? 'الاسم الأخير' : 'Last Name'}</p>
                                 <input
                                     className='jobapp-input'
                                     type="text"
@@ -108,11 +108,11 @@ const JobApplication = () => {
 
                         <div className='jobapp-row'>
                             <div className='jobapp-field'>
-                                <p className='jobapp-label'>{isArabic ? 'البريد الإلكتروني *' : 'Email Address *'}</p>
+                                <p className='jobapp-label'>{isArabic ? 'البريد الإلكتروني' : 'Email Address'}</p>
                                 <input className='jobapp-input' type="email" />
                             </div>
                             <div className='jobapp-field'>
-                                <p className='jobapp-label'>{isArabic ? 'رقم الهاتف *' : 'Phone Number *'}</p>
+                                <p className='jobapp-label'>{isArabic ? 'رقم الهاتف' : 'Phone Number'}</p>
                                 <input
                                     className='jobapp-input'
                                     type="number"
@@ -131,7 +131,7 @@ const JobApplication = () => {
                         </div>
 
                         <div className='jobapp-field full'>
-                            <p className='jobapp-label'>{isArabic ? 'السيرة الذاتية *' : 'Resume/CV *'}</p>
+                            <p className='jobapp-label'>{isArabic ? 'السيرة الذاتية' : 'Resume/CV'}</p>
                             <div className='jobapp-upload'>
                                 <img src={upload} alt="upload icon" />
                                 <p className='jobapp-upload-text'>{isArabic ? 'ارفع سيرتك الذاتية' : 'Upload your resume'}</p>
@@ -149,13 +149,13 @@ const JobApplication = () => {
                         </div>
 
                         <div className='jobapp-field full'>
-                            <p className='jobapp-label'>{isArabic ? 'لماذا أنت مهتم بهذا المنصب؟ *' : 'Why are you interested in this position? *'}</p>
+                            <p className='jobapp-label'>{isArabic ? 'لماذا أنت مهتم بهذا المنصب؟' : 'Why are you interested in this position?'}</p>
                             <textarea className='jobapp-textarea' />
                         </div>
 
                         <div className='jobapp-field full'>
-                            <p className='jobapp-label'>{isArabic ? 'سنوات الخبرة ذات الصلة *' : 'Years of Relevant Experience *'}</p>
-                            <input className='jobapp-input' type="text" />
+                            <p className='jobapp-label'>{isArabic ? 'سنوات الخبرة ذات الصلة' : 'Years of Relevant Experience'}</p>
+                            <input className='jobapp-input' type="number" />
                         </div>
 
                         <div className='jobapp-field full'>

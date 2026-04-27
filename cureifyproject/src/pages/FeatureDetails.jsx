@@ -63,7 +63,7 @@ const FeatureDetails = () => {
             </div>
             <Link to="/features" style={{ textDecoration: "none" }}>
     <p className='jobapp-back poasb'>
-        <img src={backarrow} alt="back" className='jobapp-back-icon' />
+        <img src={backarrow} alt="back" className='jobapp-back-icon' style={{ transform: isArabic ? 'scaleX(-1)' : 'none' }}/>
         {isArabic ? 'العودة إلى المميزات' : 'Back to Features'}
     </p>
 </Link>
@@ -89,12 +89,12 @@ const FeatureDetails = () => {
                         variants={fadeUp} initial="hidden" whileInView="visible"
                         transition={{ duration: 0.7, delay: 0.3 }} viewport={vp}
                     >
-                        <FilledButton btext={isArabic ? "شاهد كيف يعمل" : "See how it works"} />
+                        <FilledButton onClick={() => document.getElementById('hiw-div').scrollIntoView({ behavior: 'smooth' })} btext={isArabic ? "شاهد كيف يعمل" : "See how it works"} />
                     </motion.div>
                 </div>
             </div>
 
-            <div className='featuresSection whitebg padding120'>
+            <div className='featuresSection whitebg padding120' id='hiw-div'>
                 <div className='titlewdes2'>
                     <motion.p
                         className='grey'
