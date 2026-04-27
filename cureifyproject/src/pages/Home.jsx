@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+
+import React, { useRef } from 'react';
 import "./Home.css";
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
@@ -30,7 +31,7 @@ import DownloadApp from '../components/DownloadApp';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { useLang } from '../context/LanguageContext';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 32 },
@@ -39,8 +40,40 @@ const fadeUp = {
 
 const vp = { once: true, amount: 0.2 };
 
+const AnimatedIcon = ({ src, cls, sx, sy, ex, ey, scrollYProgress }) => {
+    const x = useTransform(scrollYProgress, [0, 1], [sx, ex]);
+    const y = useTransform(scrollYProgress, [0, 1], [sy, ey]);
+    const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 1]);
+
+    return (
+        <motion.div
+            className={`w-icon ${cls}`}
+            style={{ x, y, opacity, position: 'absolute' }}
+        >
+            <img src={src} />
+        </motion.div>
+    );
+};
+
+const icons = [
+    { src: i1, cls: 'w-icon-1', sx: -600, sy: -350, ex: -80, ey: -105 },
+    { src: i2, cls: 'w-icon-2', sx: -100, sy: -500, ex: 0,   ey: -105 },
+    { src: i3, cls: 'w-icon-3', sx: 550,  sy: -400, ex: 75,  ey: -105 },
+    { src: i4, cls: 'w-icon-4', sx: -650, sy: 100,  ex: -80, ey: 30   },
+    { src: i5, cls: 'w-icon-5', sx: 200,  sy: 300,  ex: 0,   ey: 30   },
+    { src: i6, cls: 'w-icon-6', sx: 600,  sy: 200,  ex: 80,  ey: 30   },
+    { src: i7, cls: 'w-icon-7', sx: -450, sy: 400,  ex: -85, ey: 165  },
+    { src: i8, cls: 'w-icon-8', sx: -200, sy: -350, ex: 0,   ey: 165  },
+    { src: i9, cls: 'w-icon-9', sx: 450,  sy: 450,  ex: 80,  ey: 165  },
+];
+
 const Home = () => {
     const { isArabic } = useLang();
+    const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 0.8", "end end"]  // starts earlier, ends later = more scroll time
+});
 
     return (
         <>
@@ -58,55 +91,55 @@ const Home = () => {
             pimage={phone}
         />
 
-       <div className='featuresSection'>
-    <motion.p
-        className='titles w90'
-        variants={fadeUp} initial="hidden" whileInView="visible"
-        transition={{ duration: 0.6 }} viewport={vp}
-    >
-        {isArabic
-            ? "إنها بساطة البقاء على المسار الصحيح. صحتك، بين يديك…"
-            : "It's the simplicity of staying on track. It's your health, handled using…"}
-    </motion.p>
-    <div className='forfeatures'>
-        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0 }} viewport={vp}>
-            <FeatureCard fimg={f1}
-                fname={isArabic ? "ماسح الوصفات بالذكاء الاصطناعي" : "AI Prescription Scanner"}
-                fdes={isArabic
-                    ? "أوقف عناء البحث اليدوي. يستخرج الذكاء الاصطناعي لدينا كل تفاصيل وصفتك الطبية من صورة واحدة فورًا، ويملأ تلقائيًا سلة مشترياتك وجدولك بدقة 100%."
-                    : "Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically populating your cart and schedule with 100% accuracy."} />
-        </motion.div>
-        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.1 }} viewport={vp}>
-            <FeatureCard fimg={f2}
-                fname={isArabic ? "مكافآت الالتزام" : "Adherence Rewards"}
-                fdes={isArabic
-                    ? "على عكس المنصات الأخرى التي تكافئ المشتريات فقط، نحن نكافئ الاتساق. اكسب نقاطًا مقابل تناول دوائك في الوقت المحدد والالتزام بخطة علاجك."
-                    : "Unlike other platforms that only reward purchases, we reward consistency. Earn points for taking your medicine on time and staying on track with your treatment."} />
-        </motion.div>
-        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.2 }} viewport={vp}>
-            <FeatureCard fimg={f3}
-                fname={isArabic ? "دقة المخزون في الوقت الفعلي" : "Real-Time Stock Accuracy"}
-                fdes={isArabic
-                    ? "لا مزيد من الإلغاءات المفاجئة. يضمن تكاملنا المباشر مع شبكة موثّقة من الصيدليات أن ما تراه متوفر فعلًا على الرف."
-                    : "No more surprise cancellations. Our direct integration with a verified network of pharmacies ensures what you see is actually on the shelf."} />
-        </motion.div>
-        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.3 }} viewport={vp}>
-            <FeatureCard fimg={f4}
-                fname={isArabic ? "سجلات تحاليل الدم" : "Blood Test Records"}
-                fdes={isArabic
-                    ? "أوقف التخمين بشأن صحتك. ارفع نتائج تحاليلك بسهولة وقارنها عبر الزمن لتتبع الاتجاهات ومعرفة استجابة جسمك للعلاج."
-                    : "Stop guessing about your health. Easily upload and compare your blood test results over time to visualize trends and track how your body is responding to treatment."} />
-        </motion.div>
-    </div>
-    <motion.div
-        variants={fadeUp} initial="hidden" whileInView="visible"
-        transition={{ duration: 0.6, delay: 0.4 }} viewport={vp}
-    >
-        <Link to="/features" style={{ textDecoration: "none" }}>
-            <FilledButton btext={isArabic ? "استكشف جميع المميزات" : "Explore all features"} />
-        </Link>
-    </motion.div>
-</div>
+        <div className='featuresSection'>
+            <motion.p
+                className='titles w90'
+                variants={fadeUp} initial="hidden" whileInView="visible"
+                transition={{ duration: 0.6 }} viewport={vp}
+            >
+                {isArabic
+                    ? "إنها بساطة البقاء على المسار الصحيح. صحتك، بين يديك…"
+                    : "It's the simplicity of staying on track. It's your health, handled using…"}
+            </motion.p>
+            <div className='forfeatures'>
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0 }} viewport={vp}>
+                    <FeatureCard fimg={f1}
+                        fname={isArabic ? "ماسح الوصفات بالذكاء الاصطناعي" : "AI Prescription Scanner"}
+                        fdes={isArabic
+                            ? "أوقف عناء البحث اليدوي. يستخرج الذكاء الاصطناعي لدينا كل تفاصيل وصفتك الطبية من صورة واحدة فورًا، ويملأ تلقائيًا سلة مشترياتك وجدولك بدقة 100%."
+                            : "Stop the manual search struggle. Our AI instantly extracts every detail from your prescription photo, automatically populating your cart and schedule with 100% accuracy."} />
+                </motion.div>
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.1 }} viewport={vp}>
+                    <FeatureCard fimg={f2}
+                        fname={isArabic ? "مكافآت الالتزام" : "Adherence Rewards"}
+                        fdes={isArabic
+                            ? "على عكس المنصات الأخرى التي تكافئ المشتريات فقط، نحن نكافئ الاتساق. اكسب نقاطًا مقابل تناول دوائك في الوقت المحدد والالتزام بخطة علاجك."
+                            : "Unlike other platforms that only reward purchases, we reward consistency. Earn points for taking your medicine on time and staying on track with your treatment."} />
+                </motion.div>
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.2 }} viewport={vp}>
+                    <FeatureCard fimg={f3}
+                        fname={isArabic ? "دقة المخزون في الوقت الفعلي" : "Real-Time Stock Accuracy"}
+                        fdes={isArabic
+                            ? "لا مزيد من الإلغاءات المفاجئة. يضمن تكاملنا المباشر مع شبكة موثّقة من الصيدليات أن ما تراه متوفر فعلًا على الرف."
+                            : "No more surprise cancellations. Our direct integration with a verified network of pharmacies ensures what you see is actually on the shelf."} />
+                </motion.div>
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.3 }} viewport={vp}>
+                    <FeatureCard fimg={f4}
+                        fname={isArabic ? "سجلات تحاليل الدم" : "Blood Test Records"}
+                        fdes={isArabic
+                            ? "أوقف التخمين بشأن صحتك. ارفع نتائج تحاليلك بسهولة وقارنها عبر الزمن لتتبع الاتجاهات ومعرفة استجابة جسمك للعلاج."
+                            : "Stop guessing about your health. Easily upload and compare your blood test results over time to visualize trends and track how your body is responding to treatment."} />
+                </motion.div>
+            </div>
+            <motion.div
+                variants={fadeUp} initial="hidden" whileInView="visible"
+                transition={{ duration: 0.6, delay: 0.4 }} viewport={vp}
+            >
+                <Link to="/features" style={{ textDecoration: "none" }}>
+                    <FilledButton btext={isArabic ? "استكشف جميع المميزات" : "Explore all features"} />
+                </Link>
+            </motion.div>
+        </div>
 
         <div className='pgwithimg2'>
             <div className='titlewdes'>
@@ -154,7 +187,7 @@ const Home = () => {
             </div>
         </div>
 
-        <div className='whyUsSection'>
+        <div className='whyUsSection' ref={sectionRef}>
             <div className='fortitlewsub'>
                 <p className='whiteTitles'>{isArabic ? "لماذا تختارنا" : "Why Choose Us"}</p>
                 <p className='whiteDes'>
@@ -165,15 +198,13 @@ const Home = () => {
             </div>
             <div className="w-animation-wrapper">
                 <img src={phonemock} alt="phone mockup" className="w-phone-img" />
-                <div className="w-icon w-icon-1"><img src={i1} /></div>
-                <div className="w-icon w-icon-2"><img src={i2} /></div>
-                <div className="w-icon w-icon-3"><img src={i3} /></div>
-                <div className="w-icon w-icon-4"><img src={i4} /></div>
-                <div className="w-icon w-icon-5"><img src={i5} /></div>
-                <div className="w-icon w-icon-6"><img src={i6} /></div>
-                <div className="w-icon w-icon-7"><img src={i7} /></div>
-                <div className="w-icon w-icon-8"><img src={i8} /></div>
-                <div className="w-icon w-icon-9"><img src={i9} /></div>
+                {icons.map((icon, i) => (
+                    <AnimatedIcon
+                        key={i}
+                        {...icon}
+                        scrollYProgress={scrollYProgress}
+                    />
+                ))}
             </div>
         </div>
 
