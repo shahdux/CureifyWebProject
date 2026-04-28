@@ -12,5 +12,7 @@
   
     gap: 0px;
 }
-
+.removemb{
+    margin-bottom: 0;
+}
 }

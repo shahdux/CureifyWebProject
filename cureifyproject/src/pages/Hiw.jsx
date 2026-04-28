@@ -50,7 +50,7 @@ const Hiw = () => {
                     <p className='grey'>
                         {isArabic ? "طريقة العمل" : "How It Works"}
                     </p>
-                    <p className='valuedess'>
+                    <p className='valuedess removemb'>
                         {isArabic 
                             ? "ثلاث خطوات بسيطة لإدارة أفضل للأدوية" 
                             : "Three simple steps to better medication management"}

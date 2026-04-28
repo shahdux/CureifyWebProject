@@ -9,7 +9,11 @@ const HowCard = (props) => {
                 <p className='howcard-title'>{props.title}</p>
                 <p className='howcard-des'>{props.description}</p>
             </div>
+            <div className='howimgcont'>
+
             <img src={props.img} alt="step image" className='howcard-img' />
+
+            </div>
         </div>
     );
 }
