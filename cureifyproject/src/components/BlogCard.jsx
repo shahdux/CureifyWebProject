@@ -10,7 +10,10 @@ const BlogCard = (props) => {
     return (
         <>
             <div className='bogcards'>
+                <div className='blogimgcont'>
+                    
                 <img src={props.blogimg} alt="blog images" className='blogimage'/>
+                </div>
                 <div className='blogdesdiv'>
                     <p className='blogtitle'>{props.blogtitle}</p>
                     <p className='blogdes'>{props.blogdes}</p>

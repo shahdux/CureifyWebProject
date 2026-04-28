@@ -5,6 +5,7 @@ box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 padding: 25px;
 height: 538px;
  width: 560px;
+ /* box-sizing: border-box; */
 }
 .blogtitle{
     color: #36404D;
@@ -41,8 +42,20 @@ line-height: 31.016px; /* 193.85% */
     color: #0aafa0;
     transition: color 0.3s ease;
 }
+.blogimgcont {
+    width: 100%;         
+    height: 297px;       
+    overflow: hidden;   
+    border-radius: 8px;  
+}
 
 
+.blogimage {
+    width: 100%;          
+    height: 100%;         
+    object-fit: cover;    
+    display: block;
+}
 
 
 @media (max-width: 700px) {
@@ -57,5 +70,10 @@ line-height: 31.016px; /* 193.85% */
     .blogdes {
    
     width: 325px;
+    line-height: normal;
+    font-size: 15px;
 }
+.blogimgcont {
+        height: 200px;   
+    }
 }
