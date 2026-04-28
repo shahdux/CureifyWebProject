@@ -148,6 +148,9 @@ width: 400px;
         gap: 20px;
     }
     .featDes {
-        width: 321px;
+        width: 262px;
+    }
+    .featpg{
+margin-left: 0;
     }
 }

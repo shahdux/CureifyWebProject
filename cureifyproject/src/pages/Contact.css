@@ -303,7 +303,7 @@ line-height: 23.28px; /* 145.503% */
         font-size: 24px;
     }
     .contactForm{
-        width: 85%;
+        width: 90%;
     }
     .submitButton{
         width: 90%;
@@ -325,8 +325,8 @@ line-height: 23.28px; /* 145.503% */
     .padding200 {
     padding: 70px 0px;
 }
-.contactsub{
-    width: 350px;
 
-}
+    .contactsub {
+        width: 320px;
+    }
 }

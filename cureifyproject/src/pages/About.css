@@ -214,8 +214,9 @@ padding: 180px 0px;
     width: 100%;
 }
 .about-des{
-    width: 420px;
+    width: 360px;
     margin-bottom: 0px;
+    font-size: 13px;
 }
 .aboutdiv{
     gap: 10px;
