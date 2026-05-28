@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./DownloadButton.css"
 const DownloadButton = (props) => {
     return ( <>
-    <div className='downloadb'>
+    <div className='downloadb' onClick={props.onClick} style={{ cursor: "pointer" }}>
         <img src={props.softwareimg} alt="logo" />
         <div className='downtextwdes'>
             <p className='downtext'>{props.downtext}</p>

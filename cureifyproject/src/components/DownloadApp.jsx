@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./DownloadApp.css";
 import bigphone from "../assets/phone3.svg";
-import apple from "../assets/apple.svg";
+import apple from "../assets/apk.png";
 import play from "../assets/play.svg";
 import DownloadButton from './DownloadButton';
 import { useLang } from '../context/LanguageContext';
@@ -58,16 +58,18 @@ const DownloadApp = () => {
                     transition={{ duration: 0.7, delay: 0.4 }}
                     viewport={{ once: true }}
                 >
-                    <DownloadButton 
-                        softwareimg={apple} 
-                        downtext={isArabic ? "حمل من" : "Download on the"} 
-                        store={isArabic ? "متجر التطبيقات" : "App Store"}
-                    />
-                    <DownloadButton 
-                        softwareimg={play} 
-                        downtext={isArabic ? "احصل عليه من" : "Get it on"} 
-                        store={isArabic ? "جوجل بلاي" : "Google Play"}
-                    />
+                   <DownloadButton 
+    softwareimg={apple} 
+    downtext={isArabic ? "متاح على" : "Download on"} 
+    store={isArabic ? "APKPure" : "ApkPure"}
+    onClick={() => window.open("https://apkpure.com/p/com.shahd.cureify", "_blank")}
+/>
+<DownloadButton 
+    softwareimg={play} 
+    downtext={isArabic ? "احصل عليه من" : "Get it on"} 
+    store={isArabic ? "جوجل بلاي" : "Google Play"}
+    onClick={() => window.open("https://play.google.com/store/apps/details?id=com.shahd.cureify&hl=en", "_blank")}
+/>
                 </motion.div>
             </div>
         </div>
