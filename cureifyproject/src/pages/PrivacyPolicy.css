@@ -31,7 +31,7 @@
 }
 
 .privacy-hero-title {
-    font-family: Arial, sans-serif;
+    font-family: Plus jakarta sans;
     font-size: 28px;
     font-weight: 700;
     color: #fff;
@@ -83,14 +83,14 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: Plus jakarta sans;
     font-size: 15px;
     font-weight: 700;
     flex-shrink: 0;
 }
 
 .privacy-card-title {
-    font-family: Arial, sans-serif;
+    font-family: Plus jakarta sans;
     font-size: 18px;
     font-weight: 700;
     color: #1a2a4a;
@@ -181,7 +181,7 @@
 }
 
 .privacy-banner-title {
-    font-family: Arial, sans-serif;
+    font-family: Plus jakarta sans;
     font-size: 20px;
     font-weight: 700;
     color: #fff;
